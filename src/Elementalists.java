@@ -5,6 +5,8 @@ public class Elementalists {
     private JPanel JPanel;
     private JButton button1;
 
+    int testing = 0;
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyForm");
         frame.setContentPane(new Elementalists().JPanel);
