@@ -3,6 +3,7 @@ import java.awt.*;
 
 public class Elementalists {
     private JPanel JPanel;
+    private JButton button1;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyForm");
