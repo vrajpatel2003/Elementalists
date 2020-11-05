@@ -8,10 +8,8 @@ public class Elementalists {
 
     public static void HelloWorld() {
         System.out.println("only ayush's method now hehehe");
+        System.out.println("i have branch");
     }
-
-
-
 
     public static void HelloWorld2() {
         System.out.println("Hello World! -AYUSH");
