@@ -22,7 +22,7 @@ public class Elementalists {
         System.out.println("gorilla");
         System.out.println("gorilla");
         System.out.println("gorilla");
-        System.out.println("https://static.scientificamerican.com/sciam/cache/file/61C732B0-EB7D-41B9-ACAB32B2EB9799C6_source.jpg")
+        System.out.println("https://static.scientificamerican.com/sciam/cache/file/61C732B0-EB7D-41B9-ACAB32B2EB9799C6_source.jpg");
     }
 
     public static void HelloWorld3() {
