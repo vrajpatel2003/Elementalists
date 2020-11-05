@@ -25,6 +25,7 @@ public class Elementalists {
         System.out.println("gorilla");
         System.out.println("gorilla");
         System.out.println("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT7WblTnXZl1tiLQv3H2Ls_EfbSEhpWboZ3Lw&usqp=CAU");
+        System.out.println("yo why is this so dumb");
     }
 
     public static void HelloWorld3() {
