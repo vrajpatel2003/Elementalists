@@ -4,7 +4,7 @@ import java.sql.SQLOutput;
 
 public class Elementalists {
     private JPanel JPanel;
-    private JButton button1;
+    private JButton STARTButton;
 
     public static void HelloWorld() {
         System.out.println("only ayush's method now hehehe");
@@ -30,6 +30,7 @@ public class Elementalists {
         System.out.println("Hello World! - To.");
         System.out.println("hello World! - The.");
         System.out.println("Hello World! - Jungle.");
+        //yo hi
     }
 
     public static void main(String[] args) {
