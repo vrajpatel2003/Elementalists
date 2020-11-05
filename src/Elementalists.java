@@ -1,9 +1,22 @@
+import jdk.jshell.JShell;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Elementalists {
     private JPanel JPanel;
     private JButton button1;
+
+    public Elementalists() {
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(JPanel, "Hello");
+            }
+        });
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyForm");
