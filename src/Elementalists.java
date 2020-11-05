@@ -7,7 +7,11 @@ public class Elementalists {
     private JButton button1;
 
     public static void HelloWorld() {
-        System.out.println("Hello World!");
+        System.out.println("Hello World! -Ayush");
+    }
+
+    public static void HelloWorld2() {
+        System.out.println("Hello World! -Vraj");
     }
 
     public static void main(String[] args) {
