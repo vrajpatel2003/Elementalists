@@ -4,12 +4,14 @@ import java.sql.SQLOutput;
 
 public class Elementalists {
     private JPanel JPanel;
-    private JButton STARTButton;
+    private JButton button1;
 
     public static void HelloWorld() {
         System.out.println("only ayush's method now hehehe");
-        System.out.println("i have branch");
     }
+
+
+
 
     public static void HelloWorld2() {
         System.out.println("Hello World! -AYUSH");
@@ -22,7 +24,6 @@ public class Elementalists {
         System.out.println("gorilla");
         System.out.println("gorilla");
         System.out.println("gorilla");
-        System.out.println("https://static.scientificamerican.com/sciam/cache/file/61C732B0-EB7D-41B9-ACAB32B2EB9799C6_source.jpg");
     }
 
     public static void HelloWorld3() {
@@ -30,7 +31,6 @@ public class Elementalists {
         System.out.println("Hello World! - To.");
         System.out.println("hello World! - The.");
         System.out.println("Hello World! - Jungle.");
-        //yo hi
     }
 
     public static void main(String[] args) {
