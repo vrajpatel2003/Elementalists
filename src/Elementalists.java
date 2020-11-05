@@ -7,13 +7,11 @@ public class Elementalists {
     private JButton button1;
 
     public static void HelloWorld() {
-        System.out.println("Hello World! -Ayush");
-        System.out.println("Vraj is very cool");
-        System.out.println("I am learning branches");
-        System.out.println("IM ON MY PC NOW YAY");
-        System.out.println("gorilla gorilla gorilla");
-        System.out.println("I'm in the basement.");
+        System.out.println("only ayush's method now hehehe");
     }
+
+
+
 
     public static void HelloWorld2() {
         System.out.println("Hello World! -AYUSH");
