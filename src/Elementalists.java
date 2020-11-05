@@ -26,6 +26,13 @@ public class Elementalists {
         System.out.println("gorilla");
     }
 
+    public static void HelloWorld3() {
+        System.out.println("Hello World! - Welcome.");
+        System.out.println("Hello World! - To.");
+        System.out.println("hello World! - The.");
+        System.out.println("Hello World! - Jungle.");
+    }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyForm");
         frame.setContentPane(new Elementalists().JPanel);
