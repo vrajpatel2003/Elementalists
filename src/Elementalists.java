@@ -4,7 +4,7 @@ import java.sql.SQLOutput;
 
 public class Elementalists {
     private JPanel JPanel;
-    private JButton button1;
+    private JButton STARTButton;
 
     public static void HelloWorld() {
         System.out.println("only ayush's method now hehehe");
