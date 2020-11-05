@@ -20,6 +20,12 @@ public class Elementalists {
         System.out.println("Hello World - Vraj");
     }
 
+    public static void HelloWorld4() {
+        System.out.println("gorilla");
+        System.out.println("gorilla");
+        System.out.println("gorilla");
+    }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyForm");
         frame.setContentPane(new Elementalists().JPanel);
