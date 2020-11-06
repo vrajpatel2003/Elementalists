@@ -59,6 +59,8 @@ public class Elementalists {
     private void $$$setupUI$$$() {
         JPanel = new JPanel();
         JPanel.setLayout(new GridBagLayout());
+        JPanel.setBackground(new Color(-4149));
+        JPanel.setForeground(new Color(-4149));
         p1Fire1 = new JLabel();
         p1Fire1.setAlignmentY(0.0f);
         p1Fire1.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
