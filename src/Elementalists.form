@@ -2,195 +2,272 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Elementalists">
   <grid id="27dc6" binding="JPanel" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="3" y="100" width="1135" height="613"/>
+      <xy x="94" y="88" width="1421" height="647"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
       <component id="2fdb4" class="javax.swing.JLabel" binding="p1Fire1">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/FireIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="b1fa" class="javax.swing.JLabel" binding="p1Fire2">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/FireIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="50291" class="javax.swing.JLabel" binding="p1Fire3">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/FireIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="52407" class="javax.swing.JLabel" binding="p1Water1">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/WaterIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="e24f3" class="javax.swing.JLabel" binding="p1Water2">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/WaterIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="59c95" class="javax.swing.JLabel" binding="p1Water3">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/WaterIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="99949" class="javax.swing.JLabel" binding="p1Ice1">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/IceIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="3f4fb" class="javax.swing.JLabel" binding="p1Ice2">
         <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/IceIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="3d533" class="javax.swing.JLabel" binding="p1Ice3">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/IceIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="f11f7" class="javax.swing.JLabel" binding="p2Fire1">
         <constraints>
-          <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/FireIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="ac1f1" class="javax.swing.JLabel" binding="p2Fire2">
         <constraints>
-          <grid row="1" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="1" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/FireIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="d3db" class="javax.swing.JLabel" binding="p2Fire3">
         <constraints>
           <grid row="1" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/FireIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="f73f3" class="javax.swing.JLabel" binding="p2Water1">
         <constraints>
-          <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/WaterIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <text value=""/>
         </properties>
       </component>
-      <component id="c42c6" class="javax.swing.JLabel" binding="p2Water2">
+      <component id="18a4b" class="javax.swing.JLabel" binding="p2Water2">
         <constraints>
-          <grid row="3" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="2" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/WaterIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <text value=""/>
         </properties>
       </component>
-      <component id="18a4b" class="javax.swing.JLabel" binding="p2Water3">
-        <constraints>
-          <grid row="2" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
-        </constraints>
-        <properties>
-          <text value="Label"/>
-        </properties>
-      </component>
-      <component id="c38e" class="javax.swing.JLabel" binding="p2Ice1">
+      <component id="c38e" class="javax.swing.JLabel" binding="p2Water3">
         <constraints>
           <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/WaterIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="915d" class="javax.swing.JLabel" binding="p2Ice2">
         <constraints>
-          <grid row="3" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <grid row="3" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/IceIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="89f95" class="javax.swing.JLabel" binding="p2Ice3">
         <constraints>
           <grid row="3" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="25" ipady="25"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/IceIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="d9e14" class="javax.swing.JLabel" binding="player1Icon">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="100" ipady="250"/>
+          <gridbag top="10" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
-        </properties>
-      </component>
-      <component id="b681" class="javax.swing.JLabel" binding="player2Icon">
-        <constraints>
-          <grid row="4" column="6" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0" ipadx="100" ipady="250"/>
-        </constraints>
-        <properties>
-          <text value="Label"/>
+          <icon value="img/players/Player1.png"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="5955b" class="javax.swing.JButton" binding="p1Card1">
         <constraints>
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="10" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -198,6 +275,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -209,7 +287,7 @@
       <component id="ff0e5" class="javax.swing.JButton" binding="p1Card2">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -217,6 +295,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -228,7 +307,7 @@
       <component id="92e6a" class="javax.swing.JButton" binding="p1Card3">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -236,6 +315,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -247,7 +327,7 @@
       <component id="7e055" class="javax.swing.JButton" binding="p1Card4">
         <constraints>
           <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -255,6 +335,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -266,7 +347,7 @@
       <component id="39d2b" class="javax.swing.JButton" binding="p1Card5">
         <constraints>
           <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="15" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="5" bottom="10" right="15" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -274,6 +355,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -285,7 +367,7 @@
       <component id="bfff0" class="javax.swing.JButton" binding="p2Card1">
         <constraints>
           <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="15" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="15" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -293,6 +375,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -304,7 +387,7 @@
       <component id="a528f" class="javax.swing.JButton" binding="p2Card2">
         <constraints>
           <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -312,6 +395,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -323,7 +407,7 @@
       <component id="bf525" class="javax.swing.JButton" binding="p2Card3">
         <constraints>
           <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -331,6 +415,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -342,7 +427,7 @@
       <component id="b0552" class="javax.swing.JButton" binding="p2Card4">
         <constraints>
           <grid row="5" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -350,6 +435,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -361,7 +447,7 @@
       <component id="26f49" class="javax.swing.JButton" binding="p2Card5">
         <constraints>
           <grid row="5" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="0" left="5" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+          <gridbag top="10" left="5" bottom="10" right="10" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -369,6 +455,7 @@
           <background color="-16777216"/>
           <borderPainted value="false"/>
           <foreground color="-16777216"/>
+          <icon value="img/cards/BurningPalms.png"/>
           <iconTextGap value="0"/>
           <maximumSize width="100" height="160"/>
           <minimumSize width="100" height="160"/>
@@ -380,11 +467,35 @@
       <component id="bacf5" class="javax.swing.JLabel">
         <constraints>
           <grid row="0" column="3" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
+          <gridbag top="25" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <font name="Tempus Sans ITC" size="48"/>
+          <font name="Papyrus" size="48"/>
           <text value="Elementalists"/>
+        </properties>
+      </component>
+      <component id="c42c6" class="javax.swing.JLabel" binding="p2Ice1">
+        <constraints>
+          <grid row="3" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <alignmentY value="0.0"/>
+          <icon value="img/icons/IceIcon.png"/>
+          <maximumSize width="30" height="30"/>
+          <minimumSize width="0" height="0"/>
+          <preferredSize width="30" height="30"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="b681" class="javax.swing.JLabel" binding="player2Icon">
+        <constraints>
+          <grid row="4" column="6" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <icon value="img/players/Player2.png"/>
+          <text value=""/>
         </properties>
       </component>
     </children>
