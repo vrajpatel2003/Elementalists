@@ -293,7 +293,7 @@ public class Elementalists {
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.gridwidth = 5;
-        gbc.insets = new Insets(10, 0, 0, 0);
+        gbc.insets = new Insets(30, 0, 0, 0);
         JPanel.add(player1Icon, gbc);
         p1Card1 = new JButton();
         p1Card1.setAlignmentY(0.0f);
@@ -515,8 +515,18 @@ public class Elementalists {
         gbc.gridx = 6;
         gbc.gridy = 4;
         gbc.gridwidth = 5;
-        gbc.insets = new Insets(10, 0, 0, 0);
+        gbc.insets = new Insets(30, 0, 0, 0);
         JPanel.add(player2Icon, gbc);
+        final JLabel label2 = new JLabel();
+        Font label2Font = this.$$$getFont$$$("Arial", -1, 20, label2.getFont());
+        if (label2Font != null) label2.setFont(label2Font);
+        label2.setText("Actions Performed");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 3;
+        gbc.gridy = 1;
+        gbc.gridwidth = 5;
+        gbc.gridheight = 3;
+        JPanel.add(label2, gbc);
     }
 
     /**
