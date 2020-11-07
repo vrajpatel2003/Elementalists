@@ -287,7 +287,7 @@ public class Elementalists {
         gbc.insets = new Insets(5, 0, 0, 0);
         JPanel.add(p2Ice3, gbc);
         player1Icon = new JLabel();
-        player1Icon.setIcon(new ImageIcon(getClass().getResource("/img/players/Player1.png")));
+        player1Icon.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueIdle.png")));
         player1Icon.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -488,6 +488,7 @@ public class Elementalists {
         final JLabel label1 = new JLabel();
         Font label1Font = this.$$$getFont$$$("Papyrus", -1, 48, label1.getFont());
         if (label1Font != null) label1.setFont(label1Font);
+        label1.setForeground(new Color(-7921800));
         label1.setText("Elementalists");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
@@ -509,7 +510,7 @@ public class Elementalists {
         gbc.insets = new Insets(5, 0, 0, 0);
         JPanel.add(p2Ice1, gbc);
         player2Icon = new JLabel();
-        player2Icon.setIcon(new ImageIcon(getClass().getResource("/img/players/Player2.png")));
+        player2Icon.setIcon(new ImageIcon(getClass().getResource("/img/player2/redIdle.png")));
         player2Icon.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 6;
@@ -520,6 +521,7 @@ public class Elementalists {
         final JLabel label2 = new JLabel();
         Font label2Font = this.$$$getFont$$$("Arial", -1, 20, label2.getFont());
         if (label2Font != null) label2.setFont(label2Font);
+        label2.setForeground(new Color(-16777216));
         label2.setText("Actions Performed");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;

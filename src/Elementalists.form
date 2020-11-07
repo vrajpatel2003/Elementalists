@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Elementalists">
   <grid id="27dc6" binding="JPanel" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="94" y="88" width="1421" height="647"/>
+      <xy x="94" y="88" width="1421" height="759"/>
     </constraints>
     <properties>
       <background color="-4149"/>
@@ -263,7 +263,7 @@
           <gridbag top="30" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <icon value="img/players/Player1.png"/>
+          <icon value="img/player1/blueIdle.png"/>
           <text value=""/>
         </properties>
       </component>
@@ -474,6 +474,7 @@
         </constraints>
         <properties>
           <font name="Papyrus" size="48"/>
+          <foreground color="-7921800"/>
           <text value="Elementalists"/>
         </properties>
       </component>
@@ -497,7 +498,7 @@
           <gridbag top="30" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <icon value="img/players/Player2.png"/>
+          <icon value="img/player2/redIdle.png"/>
           <text value=""/>
         </properties>
       </component>
@@ -508,6 +509,7 @@
         </constraints>
         <properties>
           <font name="Arial" size="20"/>
+          <foreground color="-16777216"/>
           <text value="Actions Performed"/>
         </properties>
       </component>
