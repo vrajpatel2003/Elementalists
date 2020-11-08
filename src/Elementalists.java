@@ -74,38 +74,57 @@ public class Elementalists {
         p1Card1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                shuffleCards(0);
-                compareCards(player1.get(0));
+                try {
+                    shuffleCards(0);
+                    compareCards(player1.get(0));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
 
         p1Card2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                shuffleCards(1);
-                compareCards(player1.get(1));
+                try {
+                    shuffleCards(1);
+                    compareCards(player1.get(1));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
         p1Card3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                shuffleCards(2);
-                compareCards(player1.get(2));
+                try {
+                    shuffleCards(2);
+                    compareCards(player1.get(2));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
         p1Card4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                shuffleCards(3);
-                compareCards(player1.get(3));
+                try {
+                    shuffleCards(3);
+                    compareCards(player1.get(3));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
         p1Card5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                shuffleCards(4);
-                compareCards(player1.get(4));
-
+                try {
+                    shuffleCards(4);
+                    compareCards(player1.get(4));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
     }
@@ -196,7 +215,6 @@ public class Elementalists {
             p1Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
             p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
             p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-            JOptionPane.showMessageDialog(null, "yo game over");
         }
 
     }
