@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -66,7 +68,97 @@ public class Elementalists {
         p2Card3.setIcon(imageIcons[player2.get(2)]);
         p2Card4.setIcon(imageIcons[player2.get(3)]);
         p2Card5.setIcon(imageIcons[player2.get(4)]);
+
+        p1Card1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                compareCards(player1.get(0));
+                player1.remove(0);
+
+            }
+        });
+
+        p1Card2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                compareCards(player1.get(1));
+                player1.remove(1);
+            }
+        });
+        p1Card3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                compareCards(player1.get(2));
+                player1.remove(2);
+            }
+        });
+        p1Card4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                compareCards(player1.get(3));
+                player1.remove(3);
+            }
+        });
+        p1Card5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                compareCards(player1.get(4));
+                player1.remove(4);
+            }
+        });
     }
+
+    public void compareCards(int player1int) {
+        int player2int = player2.get(0);
+        player2.remove(0);
+        p1Card1.setIcon(imageIcons[player1.get(0)]);
+        p1Card2.setIcon(imageIcons[player1.get(1)]);
+        p1Card3.setIcon(imageIcons[player1.get(2)]);
+        p1Card4.setIcon(imageIcons[player1.get(3)]);
+        p1Card5.setIcon(imageIcons[player1.get(4)]);
+
+        if (player1int >= 0 && player1int <= 9) { // p1 fire
+            if (player2int >= 10 && player2int <= 19) { // p2 water
+                // player2 win
+            } else if (player2int >= 20 && player2int <= 29) { // p2 ice
+                // player win
+            } else if (player2int >= 0 && player2int <=9) { // p2 fire
+                if (player1int > player2int) {
+                    //player win
+                } else {
+                    //player2 win
+                }
+            }
+
+        } else if (player1int >= 10 && player1int <= 19) { // p1 water
+            //player2 win
+            if (player2int >= 0 && player2int <= 9) { // p2 fire
+                // player win
+            } else if (player2int >= 20 && player2int <= 29) { // p2 ice
+                // player2 win
+            } else if (player2int >= 10 && player2int <= 19) { // p2 water
+                if (player1int > player2int) {
+                    //player win
+                } else {
+                    //player2 win
+                }
+            }
+
+        } else if (player1int >= 20 && player1int <= 29) { // p1 ice
+            if (player2int >= 0 && player2int <= 9) { // p2 fire
+                // player2 win
+            } else if (player2int >= 10 && player2int <= 19) { // p2 water
+                // player win
+            } else if (player2int >= 20 && player2int <= 29) { // p2 ice
+                if (player1int > player2int) {
+                    //player win
+                } else {
+                    //player2 win
+                }
+            }
+        }
+    }
+
     public static ArrayList<Integer> randomizeCards() {
         ArrayList<Integer> cardPool = new ArrayList<Integer>();
         for (int i = 0; i < 30; i++) {
@@ -75,6 +167,7 @@ public class Elementalists {
         Collections.shuffle(cardPool);
         return cardPool;
     }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyForm");
         frame.setContentPane(new Elementalists().JPanel);
