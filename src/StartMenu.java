@@ -37,18 +37,19 @@ public class StartMenu {
 
     public void rankCheck() {
         BufferedReader br = null;
+        ArrayList<String> fileLines = new ArrayList<>();
+
         try {
             br = new BufferedReader(new FileReader("src/currentRank.txt"));
-            String word;
-            String rank;
-            while ((word = br.readLine()) != null) {
-                if (word.equals("Rank:")) {
-                    if ((word = br.readLine()) != null) {
-                        rank = word;
-                        lblRank.setText("Current Rank: " + rank);
-                    }
-                }
+
+            String newLine;
+
+            while ((newLine = br.readLine()) != null) {
+                fileLines.add(newLine);
             }
+
+            lblRank.setText("Current Rank: " + fileLines.get(0));
+
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -79,21 +80,11 @@ public class StartMenu {
         startMenu.setLayout(new GridBagLayout());
         startMenu.setBackground(new Color(-4149));
         startMenu.setForeground(new Color(-4149));
-        final JLabel label1 = new JLabel();
-        Font label1Font = this.$$$getFont$$$("Papyrus", -1, 72, label1.getFont());
-        if (label1Font != null) label1.setFont(label1Font);
-        label1.setForeground(new Color(-7921800));
-        label1.setText("Welcome to Elementalists!");
-        GridBagConstraints gbc;
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.insets = new Insets(25, 25, 25, 25);
-        startMenu.add(label1, gbc);
         startGameButton = new JButton();
         Font startGameButtonFont = this.$$$getFont$$$("Papyrus", -1, 16, startGameButton.getFont());
         if (startGameButtonFont != null) startGameButton.setFont(startGameButtonFont);
         startGameButton.setText("Start Game!");
+        GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
@@ -102,12 +93,22 @@ public class StartMenu {
         startMenu.add(startGameButton, gbc);
         lblRank = new JLabel();
         lblRank.setForeground(new Color(-16777216));
-        lblRank.setText("Your Rank: Apprentice");
+        lblRank.setText("Current Rank: Apprentice");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.insets = new Insets(25, 25, 25, 25);
         startMenu.add(lblRank, gbc);
+        final JLabel label1 = new JLabel();
+        Font label1Font = this.$$$getFont$$$("Papyrus", -1, 72, label1.getFont());
+        if (label1Font != null) label1.setFont(label1Font);
+        label1.setForeground(new Color(-7921800));
+        label1.setText("Elementalists");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(25, 25, 25, 25);
+        startMenu.add(label1, gbc);
     }
 
     /**
