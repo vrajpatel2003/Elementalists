@@ -27,10 +27,11 @@
           <gridbag top="25" left="25" bottom="25" right="25" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
+          <font name="Papyrus" size="16"/>
           <text value="Start Game!"/>
         </properties>
       </component>
-      <component id="86eb" class="javax.swing.JLabel">
+      <component id="86eb" class="javax.swing.JLabel" binding="lblRank">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag top="25" left="25" bottom="25" right="25" weightx="0.0" weighty="0.0"/>

@@ -2,13 +2,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.*;
+import java.io.*;
 
 public class StartMenu {
     private JButton startGameButton;
     private JPanel startMenu;
+    private JLabel lblRank;
     static JFrame frame = new JFrame("MyForm");
 
+
     public StartMenu() {
+        rankCheck();
         startGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -18,6 +23,7 @@ public class StartMenu {
                 game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 game.pack();
                 game.setVisible(true);
+
             }
         });
     }
@@ -27,6 +33,32 @@ public class StartMenu {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    public void rankCheck() {
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader("C:/Users/neilp/IdeaProjects/Elementalists/src/currentRank.txt"));
+            String word;
+            String rank;
+            while ((word = br.readLine()) != null) {
+                if (word.equals("Rank:")) {
+                    if ((word = br.readLine()) != null) {
+                        rank = word;
+                        lblRank.setText("Current Rank: " + rank);
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                br.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
     {
@@ -60,6 +92,8 @@ public class StartMenu {
         gbc.insets = new Insets(25, 25, 25, 25);
         startMenu.add(label1, gbc);
         startGameButton = new JButton();
+        Font startGameButtonFont = this.$$$getFont$$$("Papyrus", -1, 16, startGameButton.getFont());
+        if (startGameButtonFont != null) startGameButton.setFont(startGameButtonFont);
         startGameButton.setText("Start Game!");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -67,14 +101,14 @@ public class StartMenu {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(25, 25, 25, 25);
         startMenu.add(startGameButton, gbc);
-        final JLabel label2 = new JLabel();
-        label2.setForeground(new Color(-16777216));
-        label2.setText("Your Rank: Apprentice");
+        lblRank = new JLabel();
+        lblRank.setForeground(new Color(-16777216));
+        lblRank.setText("Your Rank: Apprentice");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.insets = new Insets(25, 25, 25, 25);
-        startMenu.add(label2, gbc);
+        startMenu.add(lblRank, gbc);
     }
 
     /**
