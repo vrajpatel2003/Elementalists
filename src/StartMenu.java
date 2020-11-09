@@ -38,7 +38,7 @@ public class StartMenu {
     public void rankCheck() {
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader("C:/Users/neilp/IdeaProjects/Elementalists/src/currentRank.txt"));
+            br = new BufferedReader(new FileReader("src/currentRank.txt"));
             String word;
             String rank;
             while ((word = br.readLine()) != null) {
@@ -49,7 +49,6 @@ public class StartMenu {
                     }
                 }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
