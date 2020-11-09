@@ -43,6 +43,8 @@ public class Elementalists {
     String firePath = "./src/img/cards/Fire/";
     String waterPath = "./src/img/cards/Water/";
     String icePath = "./src/img/cards/Ice/";
+    String attack1 = "./src/img/player1/";
+    String attack2 = "./src/img/player2/";
     ImageIcon[] imageIcons = new ImageIcon[30];
     ArrayList<Integer> player1;
     ArrayList<Integer> player2;
@@ -133,44 +135,74 @@ public class Elementalists {
         int player2int = player2.get(0);
         player2.remove(0);
 
+        ImageIcon blueAttack = new ImageIcon(attack1 + "blueAttack.png");
+        ImageIcon redDamage = new ImageIcon(attack2 + "redDamage.png");
+        ImageIcon blueDamage = new ImageIcon(attack1 + "blueDamage.png");
+        ImageIcon redAttack = new ImageIcon(attack2 + "redAttack.png");
 
         if (player1int >= 0 && player1int <= 9) { // p1 fire
             if (player2int >= 10 && player2int <= 19) { // p2 water
                 // player2 win
+                player1Icon.setIcon(blueDamage);
+                player2Icon.setIcon(redAttack);
             } else if (player2int >= 20 && player2int <= 29) { // p2 ice
                 // player win
+                player1Icon.setIcon(blueAttack);
+                player2Icon.setIcon(redDamage);
             } else if (player2int >= 0 && player2int <= 9) { // p2 fire
                 if (player1int > player2int) {
                     //player win
+                    player1Icon.setIcon(blueAttack);
+                    player2Icon.setIcon(redDamage);
                 } else {
                     //player2 win
+                    player1Icon.setIcon(blueDamage);
+                    player2Icon.setIcon(redAttack);
                 }
             }
 
         } else if (player1int >= 10 && player1int <= 19) { // p1 water
             //player2 win
+            player1Icon.setIcon(blueDamage);
+            player2Icon.setIcon(redAttack);
             if (player2int >= 0 && player2int <= 9) { // p2 fire
                 // player win
+                player1Icon.setIcon(blueAttack);
+                player2Icon.setIcon(redDamage);
             } else if (player2int >= 20 && player2int <= 29) { // p2 ice
                 // player2 win
+                player1Icon.setIcon(blueDamage);
+                player2Icon.setIcon(redAttack);
             } else if (player2int >= 10 && player2int <= 19) { // p2 water
                 if (player1int > player2int) {
                     //player win
+                    player1Icon.setIcon(blueAttack);
+                    player2Icon.setIcon(redDamage);
                 } else {
                     //player2 win
+                    player1Icon.setIcon(blueDamage);
+                    player2Icon.setIcon(redAttack);
                 }
             }
 
         } else if (player1int >= 20 && player1int <= 29) { // p1 ice
             if (player2int >= 0 && player2int <= 9) { // p2 fire
                 // player2 win
+                player1Icon.setIcon(blueDamage);
+                player2Icon.setIcon(redAttack);
             } else if (player2int >= 10 && player2int <= 19) { // p2 water
                 // player win
+                player1Icon.setIcon(blueAttack);
+                player2Icon.setIcon(redDamage);
             } else if (player2int >= 20 && player2int <= 29) { // p2 ice
                 if (player1int > player2int) {
                     //player win
+                    player1Icon.setIcon(blueAttack);
+                    player2Icon.setIcon(redDamage);
                 } else {
                     //player2 win
+                    player1Icon.setIcon(blueDamage);
+                    player2Icon.setIcon(redAttack);
                 }
             }
         }
