@@ -37,7 +37,7 @@
         </constraints>
         <properties>
           <foreground color="-16777216"/>
-          <text value="Your Rank: White Belt"/>
+          <text value="Your Rank: Apprentice"/>
         </properties>
       </component>
     </children>
