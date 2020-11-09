@@ -1,6 +1,6 @@
+Rank:
 Apprentice
 Initiate
-Rank:
 Disciple
 Adept
 Master
