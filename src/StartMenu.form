@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="StartMenu">
+  <grid id="27dc6" binding="startMenu" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="874" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-4149"/>
+      <foreground color="-4149"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="d2e43" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="25" left="25" bottom="25" right="25" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Papyrus" size="72"/>
+          <foreground color="-7921800"/>
+          <text value="Welcome to Elementalists!"/>
+        </properties>
+      </component>
+      <component id="be1ab" class="javax.swing.JButton" binding="startGameButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="25" left="25" bottom="25" right="25" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Start Game!"/>
+        </properties>
+      </component>
+      <component id="86eb" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="25" left="25" bottom="25" right="25" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-16777216"/>
+          <text value="Your Rank: White Belt"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

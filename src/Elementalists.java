@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Elementalists {
-    private JPanel JPanel;
+    private JPanel jPanel;
     private JLabel p2Fire1;
     private JLabel p2Fire2;
     private JLabel p2Fire3;
@@ -228,9 +228,13 @@ public class Elementalists {
         return cardPool;
     }
 
+    public JPanel getJPanel() {
+        return jPanel;
+    }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyForm");
-        frame.setContentPane(new Elementalists().JPanel);
+        frame.setContentPane(new Elementalists().jPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
@@ -251,10 +255,10 @@ public class Elementalists {
      * @noinspection ALL
      */
     private void $$$setupUI$$$() {
-        JPanel = new JPanel();
-        JPanel.setLayout(new GridBagLayout());
-        JPanel.setBackground(new Color(-4149));
-        JPanel.setForeground(new Color(-4149));
+        jPanel = new JPanel();
+        jPanel.setLayout(new GridBagLayout());
+        jPanel.setBackground(new Color(-4149));
+        jPanel.setForeground(new Color(-4149));
         p2Fire1 = new JLabel();
         p2Fire1.setAlignmentY(0.0f);
         p2Fire1.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
@@ -268,7 +272,7 @@ public class Elementalists {
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.EAST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p2Fire1, gbc);
+        jPanel.add(p2Fire1, gbc);
         p2Fire2 = new JLabel();
         p2Fire2.setAlignmentY(0.0f);
         p2Fire2.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
@@ -280,7 +284,7 @@ public class Elementalists {
         gbc.gridx = 8;
         gbc.gridy = 1;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p2Fire2, gbc);
+        jPanel.add(p2Fire2, gbc);
         p2Fire3 = new JLabel();
         p2Fire3.setAlignmentY(0.0f);
         p2Fire3.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
@@ -293,7 +297,7 @@ public class Elementalists {
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p2Fire3, gbc);
+        jPanel.add(p2Fire3, gbc);
         p2Water1 = new JLabel();
         p2Water1.setAlignmentY(0.0f);
         p2Water1.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
@@ -306,7 +310,7 @@ public class Elementalists {
         gbc.gridy = 2;
         gbc.anchor = GridBagConstraints.EAST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p2Water1, gbc);
+        jPanel.add(p2Water1, gbc);
         p2Water2 = new JLabel();
         p2Water2.setAlignmentY(0.0f);
         p2Water2.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
@@ -318,7 +322,7 @@ public class Elementalists {
         gbc.gridx = 8;
         gbc.gridy = 2;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p2Water2, gbc);
+        jPanel.add(p2Water2, gbc);
         p2Water3 = new JLabel();
         p2Water3.setAlignmentY(0.0f);
         p2Water3.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
@@ -331,7 +335,7 @@ public class Elementalists {
         gbc.gridy = 2;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p2Water3, gbc);
+        jPanel.add(p2Water3, gbc);
         p2Ice2 = new JLabel();
         p2Ice2.setAlignmentY(0.0f);
         p2Ice2.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
@@ -343,7 +347,7 @@ public class Elementalists {
         gbc.gridx = 8;
         gbc.gridy = 3;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p2Ice2, gbc);
+        jPanel.add(p2Ice2, gbc);
         p2Ice3 = new JLabel();
         p2Ice3.setAlignmentY(0.0f);
         p2Ice3.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
@@ -356,7 +360,7 @@ public class Elementalists {
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p2Ice3, gbc);
+        jPanel.add(p2Ice3, gbc);
         p2Card1 = new JButton();
         p2Card1.setAlignmentY(0.0f);
         p2Card1.setAutoscrolls(false);
@@ -375,7 +379,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 15, 10, 5);
-        JPanel.add(p2Card1, gbc);
+        jPanel.add(p2Card1, gbc);
         p2Card2 = new JButton();
         p2Card2.setAlignmentY(0.0f);
         p2Card2.setAutoscrolls(false);
@@ -394,7 +398,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 5, 10, 5);
-        JPanel.add(p2Card2, gbc);
+        jPanel.add(p2Card2, gbc);
         p2Card3 = new JButton();
         p2Card3.setAlignmentY(0.0f);
         p2Card3.setAutoscrolls(false);
@@ -413,7 +417,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 5, 10, 5);
-        JPanel.add(p2Card3, gbc);
+        jPanel.add(p2Card3, gbc);
         p2Card4 = new JButton();
         p2Card4.setAlignmentY(0.0f);
         p2Card4.setAutoscrolls(false);
@@ -432,7 +436,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 5, 10, 5);
-        JPanel.add(p2Card4, gbc);
+        jPanel.add(p2Card4, gbc);
         p2Card5 = new JButton();
         p2Card5.setAlignmentY(0.0f);
         p2Card5.setAutoscrolls(false);
@@ -451,7 +455,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 5, 10, 10);
-        JPanel.add(p2Card5, gbc);
+        jPanel.add(p2Card5, gbc);
         final JLabel label1 = new JLabel();
         Font label1Font = this.$$$getFont$$$("Papyrus", -1, 48, label1.getFont());
         if (label1Font != null) label1.setFont(label1Font);
@@ -462,7 +466,7 @@ public class Elementalists {
         gbc.gridy = 0;
         gbc.gridwidth = 4;
         gbc.insets = new Insets(25, 0, 0, 0);
-        JPanel.add(label1, gbc);
+        jPanel.add(label1, gbc);
         p2Ice1 = new JLabel();
         p2Ice1.setAlignmentY(0.0f);
         p2Ice1.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
@@ -475,7 +479,7 @@ public class Elementalists {
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.EAST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p2Ice1, gbc);
+        jPanel.add(p2Ice1, gbc);
         player2Icon = new JLabel();
         player2Icon.setIcon(new ImageIcon(getClass().getResource("/img/player2/redIdle.png")));
         player2Icon.setText("");
@@ -484,7 +488,7 @@ public class Elementalists {
         gbc.gridy = 4;
         gbc.gridwidth = 5;
         gbc.insets = new Insets(30, 0, 0, 0);
-        JPanel.add(player2Icon, gbc);
+        jPanel.add(player2Icon, gbc);
         final JLabel label2 = new JLabel();
         Font label2Font = this.$$$getFont$$$("Arial", -1, 20, label2.getFont());
         if (label2Font != null) label2.setFont(label2Font);
@@ -495,7 +499,7 @@ public class Elementalists {
         gbc.gridy = 1;
         gbc.gridwidth = 4;
         gbc.gridheight = 3;
-        JPanel.add(label2, gbc);
+        jPanel.add(label2, gbc);
         player1Icon = new JLabel();
         player1Icon.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueIdle.png")));
         player1Icon.setText("");
@@ -504,7 +508,7 @@ public class Elementalists {
         gbc.gridy = 4;
         gbc.gridwidth = 5;
         gbc.insets = new Insets(30, 0, 0, 0);
-        JPanel.add(player1Icon, gbc);
+        jPanel.add(player1Icon, gbc);
         p1Card1 = new JButton();
         p1Card1.setAlignmentY(0.0f);
         p1Card1.setAutoscrolls(false);
@@ -523,7 +527,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 10, 10, 5);
-        JPanel.add(p1Card1, gbc);
+        jPanel.add(p1Card1, gbc);
         p1Card2 = new JButton();
         p1Card2.setAlignmentY(0.0f);
         p1Card2.setAutoscrolls(false);
@@ -542,7 +546,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 5, 10, 5);
-        JPanel.add(p1Card2, gbc);
+        jPanel.add(p1Card2, gbc);
         p1Card3 = new JButton();
         p1Card3.setAlignmentY(0.0f);
         p1Card3.setAutoscrolls(false);
@@ -561,7 +565,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 5, 10, 5);
-        JPanel.add(p1Card3, gbc);
+        jPanel.add(p1Card3, gbc);
         p1Card4 = new JButton();
         p1Card4.setAlignmentY(0.0f);
         p1Card4.setAutoscrolls(false);
@@ -580,7 +584,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 5, 10, 5);
-        JPanel.add(p1Card4, gbc);
+        jPanel.add(p1Card4, gbc);
         p1Card5 = new JButton();
         p1Card5.setAlignmentY(0.0f);
         p1Card5.setAutoscrolls(false);
@@ -599,7 +603,7 @@ public class Elementalists {
         gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 5, 10, 15);
-        JPanel.add(p1Card5, gbc);
+        jPanel.add(p1Card5, gbc);
         p1Fire1 = new JLabel();
         p1Fire1.setAlignmentY(0.0f);
         p1Fire1.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
@@ -612,7 +616,7 @@ public class Elementalists {
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.EAST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p1Fire1, gbc);
+        jPanel.add(p1Fire1, gbc);
         p1Fire2 = new JLabel();
         p1Fire2.setAlignmentY(0.0f);
         p1Fire2.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
@@ -624,7 +628,7 @@ public class Elementalists {
         gbc.gridx = 1;
         gbc.gridy = 1;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p1Fire2, gbc);
+        jPanel.add(p1Fire2, gbc);
         p1Fire3 = new JLabel();
         p1Fire3.setAlignmentY(0.0f);
         p1Fire3.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
@@ -637,7 +641,7 @@ public class Elementalists {
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p1Fire3, gbc);
+        jPanel.add(p1Fire3, gbc);
         p1Water1 = new JLabel();
         p1Water1.setAlignmentY(0.0f);
         p1Water1.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
@@ -650,7 +654,7 @@ public class Elementalists {
         gbc.gridy = 2;
         gbc.anchor = GridBagConstraints.EAST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p1Water1, gbc);
+        jPanel.add(p1Water1, gbc);
         p1Water2 = new JLabel();
         p1Water2.setAlignmentY(0.0f);
         p1Water2.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
@@ -662,7 +666,7 @@ public class Elementalists {
         gbc.gridx = 1;
         gbc.gridy = 2;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p1Water2, gbc);
+        jPanel.add(p1Water2, gbc);
         p1Water3 = new JLabel();
         p1Water3.setAlignmentY(0.0f);
         p1Water3.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
@@ -675,7 +679,7 @@ public class Elementalists {
         gbc.gridy = 2;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p1Water3, gbc);
+        jPanel.add(p1Water3, gbc);
         p1Ice2 = new JLabel();
         p1Ice2.setAlignmentY(0.0f);
         p1Ice2.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
@@ -687,7 +691,7 @@ public class Elementalists {
         gbc.gridx = 1;
         gbc.gridy = 3;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p1Ice2, gbc);
+        jPanel.add(p1Ice2, gbc);
         p1Ice3 = new JLabel();
         p1Ice3.setAlignmentY(0.0f);
         p1Ice3.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
@@ -700,7 +704,7 @@ public class Elementalists {
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.WEST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p1Ice3, gbc);
+        jPanel.add(p1Ice3, gbc);
         p1Ice1 = new JLabel();
         p1Ice1.setAlignmentY(0.0f);
         p1Ice1.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
@@ -713,7 +717,7 @@ public class Elementalists {
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.EAST;
         gbc.insets = new Insets(5, 0, 0, 0);
-        JPanel.add(p1Ice1, gbc);
+        jPanel.add(p1Ice1, gbc);
     }
 
     /**
@@ -739,7 +743,7 @@ public class Elementalists {
      * @noinspection ALL
      */
     public JComponent $$$getRootComponent$$$() {
-        return JPanel;
+        return jPanel;
     }
 
 }

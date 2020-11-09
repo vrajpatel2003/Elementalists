@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Elementalists">
-  <grid id="27dc6" binding="JPanel" layout-manager="GridBagLayout">
+  <grid id="27dc6" binding="jPanel" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="602" y="-22" width="1212" height="869"/>
+      <xy x="602" y="-22" width="1130" height="595"/>
     </constraints>
     <properties>
       <background color="-4149"/>
