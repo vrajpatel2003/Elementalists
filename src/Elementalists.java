@@ -74,38 +74,57 @@ public class Elementalists {
         p1Card1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                compareCards(player1.get(0));
-                player1.remove(0);
-
+                try {
+                    shuffleCards(0);
+                    compareCards(player1.get(0));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
 
         p1Card2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                compareCards(player1.get(1));
-                player1.remove(1);
+                try {
+                    shuffleCards(1);
+                    compareCards(player1.get(1));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
         p1Card3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                compareCards(player1.get(2));
-                player1.remove(2);
+                try {
+                    shuffleCards(2);
+                    compareCards(player1.get(2));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
         p1Card4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                compareCards(player1.get(3));
-                player1.remove(3);
+                try {
+                    shuffleCards(3);
+                    compareCards(player1.get(3));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
         p1Card5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                compareCards(player1.get(4));
-                player1.remove(4);
+                try {
+                    shuffleCards(4);
+                    compareCards(player1.get(4));
+                } catch (IndexOutOfBoundsException ex) {
+                    JOptionPane.showMessageDialog(null, "game over");
+                }
             }
         });
     }
@@ -113,18 +132,14 @@ public class Elementalists {
     public void compareCards(int player1int) {
         int player2int = player2.get(0);
         player2.remove(0);
-        p1Card1.setIcon(imageIcons[player1.get(0)]);
-        p1Card2.setIcon(imageIcons[player1.get(1)]);
-        p1Card3.setIcon(imageIcons[player1.get(2)]);
-        p1Card4.setIcon(imageIcons[player1.get(3)]);
-        p1Card5.setIcon(imageIcons[player1.get(4)]);
+
 
         if (player1int >= 0 && player1int <= 9) { // p1 fire
             if (player2int >= 10 && player2int <= 19) { // p2 water
                 // player2 win
             } else if (player2int >= 20 && player2int <= 29) { // p2 ice
                 // player win
-            } else if (player2int >= 0 && player2int <=9) { // p2 fire
+            } else if (player2int >= 0 && player2int <= 9) { // p2 fire
                 if (player1int > player2int) {
                     //player win
                 } else {
@@ -159,6 +174,49 @@ public class Elementalists {
                 }
             }
         }
+    }
+
+    public void shuffleCards(int remove) {
+        int a = player1.size();
+        player1.remove(remove);
+        if (a > 5) {
+            p1Card1.setIcon(imageIcons[player1.get(0)]);
+            p1Card2.setIcon(imageIcons[player1.get(1)]);
+            p1Card3.setIcon(imageIcons[player1.get(2)]);
+            p1Card4.setIcon(imageIcons[player1.get(3)]);
+            p1Card5.setIcon(imageIcons[player1.get(4)]);
+        } else if (a == 5) {
+            p1Card1.setIcon(imageIcons[player1.get(0)]);
+            p1Card2.setIcon(imageIcons[player1.get(1)]);
+            p1Card3.setIcon(imageIcons[player1.get(2)]);
+            p1Card4.setIcon(imageIcons[player1.get(3)]);
+            p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        } else if (a == 4) {
+            p1Card1.setIcon(imageIcons[player1.get(0)]);
+            p1Card2.setIcon(imageIcons[player1.get(1)]);
+            p1Card3.setIcon(imageIcons[player1.get(2)]);
+            p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        } else if (a == 3) {
+            p1Card1.setIcon(imageIcons[player1.get(0)]);
+            p1Card2.setIcon(imageIcons[player1.get(1)]);
+            p1Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        } else if (a == 2) {
+            p1Card1.setIcon(imageIcons[player1.get(0)]);
+            p1Card2.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        } else if (a == 1) {
+            p1Card1.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card2.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+            p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        }
+
     }
 
     public static ArrayList<Integer> randomizeCards() {
