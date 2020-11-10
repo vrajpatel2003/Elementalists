@@ -48,6 +48,7 @@ public class Elementalists {
     ImageIcon[] imageIcons = new ImageIcon[30];
     ArrayList<Integer> player1;
     ArrayList<Integer> player2;
+    Boolean canClick = true;
 
     public Elementalists() {
         for (int i = 0; i < imageIcons.length; i++) {
@@ -77,8 +78,10 @@ public class Elementalists {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    shuffleCards(0);
-                    compareCards(player1.get(0));
+                    if (canClick) {
+                        shuffleCards(0);
+                        compareCards(player1.get(0));
+                    }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
                 }
@@ -89,8 +92,10 @@ public class Elementalists {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    shuffleCards(1);
-                    compareCards(player1.get(1));
+                    if (canClick) {
+                        shuffleCards(1);
+                        compareCards(player1.get(1));
+                    }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
                 }
@@ -100,8 +105,10 @@ public class Elementalists {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    shuffleCards(2);
-                    compareCards(player1.get(2));
+                    if (canClick) {
+                        shuffleCards(2);
+                        compareCards(player1.get(2));
+                    }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
                 }
@@ -111,8 +118,10 @@ public class Elementalists {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    shuffleCards(3);
-                    compareCards(player1.get(3));
+                    if (canClick) {
+                        shuffleCards(3);
+                        compareCards(player1.get(3));
+                    }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
                 }
@@ -122,13 +131,24 @@ public class Elementalists {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    shuffleCards(4);
-                    compareCards(player1.get(4));
+                    if (canClick) {
+                        shuffleCards(4);
+                        compareCards(player1.get(4));
+                    }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
                 }
             }
         });
+    }
+
+    public static void pause(int ms) {
+        long start = System.currentTimeMillis();
+        long endTime = start + ms;
+
+        while(start < endTime) {
+            start = System.currentTimeMillis();
+        }
     }
 
     public void compareCards(int player1int) {
