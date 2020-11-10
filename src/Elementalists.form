@@ -6,6 +6,7 @@
     </constraints>
     <properties>
       <background color="-4149"/>
+      <enabled value="false"/>
       <foreground color="-4149"/>
     </properties>
     <border type="none"/>
@@ -394,6 +395,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <doubleBuffered value="true"/>
           <enabled value="false"/>
           <icon value="img/icons/FireIcon.png"/>
           <maximumSize width="30" height="30"/>

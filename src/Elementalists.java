@@ -96,7 +96,7 @@ public class Elementalists {
                 try {
                     if (canClick) {
                         canClick = false;
-                        pause(1000);
+                        pause(500);
                         compareCards(player1.get(1));
                         shuffleCards(1);
                     }
@@ -111,7 +111,7 @@ public class Elementalists {
                 try {
                     if (canClick) {
                         canClick = false;
-                        pause(1000);
+                        pause(500);
                         compareCards(player1.get(2));
                         shuffleCards(2);
                     }
@@ -126,7 +126,7 @@ public class Elementalists {
                 try {
                     if (canClick) {
                         canClick = false;
-                        pause(1000);
+                        pause(500);
                         compareCards(player1.get(3));
                         shuffleCards(3);
                     }
@@ -141,7 +141,7 @@ public class Elementalists {
                 try {
                     if (canClick) {
                         canClick = false;
-                        pause(1000);
+                        pause(500);
                         compareCards(player1.get(4));
                         shuffleCards(4);
                     }
@@ -183,76 +183,86 @@ public class Elementalists {
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
                 p2WaterWins++;
+                checkWinner();
             } else if (player2int >= 20 && player2int <= 29) {
                 action.setText("You attacked the enemy with a fire attack!");
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
                 p1FireWins++;
+                checkWinner();
             } else if (player2int >= 0 && player2int <= 9) {
                 if (player1int > player2int) {
                     action.setText("You attacked the enemy with a stronger fire attack!");
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
                     p1FireWins++;
+                    checkWinner();
                 } else if (player1int < player2int) {
                     action.setText("The enemy attacked you with a stronger fire attack!");
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
                     p2FireWins++;
+                    checkWinner();
                 } else {
                     action.setText("Both you and the enemy fizzled!");
                 }
             }
-        }
-        else if (player1int >= 10 && player1int <= 19) {
+        } else if (player1int >= 10 && player1int <= 19) {
             if (player2int >= 0 && player2int <= 9) {
                 action.setText("You attacked the enemy with a water attack!");
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
                 p1WaterWins++;
+                checkWinner();
             } else if (player2int >= 20 && player2int <= 29) {
                 action.setText("The enemy attacked you with a ice attack!");
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
                 p2IceWins++;
+                checkWinner();
             } else if (player2int >= 10 && player2int <= 19) {
                 if (player1int > player2int) {
                     action.setText("You attacked the enemy with a stronger water attack!");
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
                     p1WaterWins++;
+                    checkWinner();
                 } else if (player1int < player2int) {
                     action.setText("The enemy attacked you with a stronger water attack!");
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
                     p2WaterWins++;
+                    checkWinner();
                 } else {
                     action.setText("Both you and the enemy fizzled!");
                 }
             }
-        }
-        else if (player1int >= 20 && player1int <= 29) {
+        } else if (player1int >= 20 && player1int <= 29) {
             if (player2int >= 0 && player2int <= 9) {
                 action.setText("The enemy attacked you with a fire attack!");
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
                 p2FireWins++;
+                checkWinner();
             } else if (player2int >= 10 && player2int <= 19) {
                 action.setText("You attacked the enemy with an ice attack!");
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
                 p1IceWins++;
+                checkWinner();
             } else if (player2int >= 20 && player2int <= 29) {
                 if (player1int > player2int) {
                     action.setText("You attacked the enemy with a stronger ice attack!");
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
                     p1IceWins++;
+                    checkWinner();
                 } else if (player1int < player2int) {
                     action.setText("The enemy attacked you with a stronger ice attack!");
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
                     p2IceWins++;
+                    checkWinner();
                 } else {
                     action.setText("Both you and the enemy fizzled!");
                 }
@@ -260,7 +270,6 @@ public class Elementalists {
         }
 
         canClick = true;
-
         p2Card1.setIcon(cardBack);
         p2Card2.setIcon(cardBack);
         p2Card3.setIcon(cardBack);
@@ -268,6 +277,84 @@ public class Elementalists {
         p2Card5.setIcon(cardBack);
 
         player2.remove(0);
+    }
+
+    public void checkWinner() {
+        System.out.println(p1FireWins);
+        System.out.println(p1WaterWins);
+        System.out.println(p1IceWins);
+        System.out.println(p2FireWins);
+        System.out.println(p2WaterWins);
+        System.out.println(p2IceWins);
+        System.out.println("----");
+
+        if (p1FireWins == 3) {
+            p1Fire1.setEnabled(true);
+            p1Fire2.setEnabled(true);
+            p1Fire3.setEnabled(true);
+        } else if (p1FireWins == 2) {
+            p1Fire1.setEnabled(true);
+            p1Fire2.setEnabled(true);
+        } else if (p1FireWins == 1) {
+            p1Fire1.setEnabled(true);
+        }
+        if (p1WaterWins == 3) {
+            p1Water1.setEnabled(true);
+            p1Water2.setEnabled(true);
+            p1Water3.setEnabled(true);
+        } else if (p1WaterWins == 2) {
+            p1Water1.setEnabled(true);
+            p1Water2.setEnabled(true);
+        } else if (p1WaterWins == 1) {
+            p1Water1.setEnabled(true);
+        }
+        if (p1IceWins == 3) {
+            p1Ice1.setEnabled(true);
+            p1Ice2.setEnabled(true);
+            p1Ice3.setEnabled(true);
+        } else if (p1IceWins == 2) {
+            p1Ice1.setEnabled(true);
+            p1Ice2.setEnabled(true);
+        } else if (p1IceWins == 1) {
+            p1Ice1.setEnabled(true);
+        }
+
+        if (p2FireWins == 3) {
+            p2Fire1.setEnabled(true);
+            p2Fire2.setEnabled(true);
+            p2Fire3.setEnabled(true);
+        } else if (p2FireWins == 2) {
+            p2Fire1.setEnabled(true);
+            p2Fire2.setEnabled(true);
+        } else if (p2FireWins == 1) {
+            p2Fire1.setEnabled(true);
+        }
+        if (p2WaterWins == 3) {
+            p2Water1.setEnabled(true);
+            p2Water2.setEnabled(true);
+            p2Water3.setEnabled(true);
+        } else if (p2WaterWins == 2) {
+            p2Water1.setEnabled(true);
+            p2Water2.setEnabled(true);
+        } else if (p2WaterWins == 1) {
+            p2Water1.setEnabled(true);
+        }
+        if (p2IceWins == 3) {
+            p2Ice1.setEnabled(true);
+            p2Ice2.setEnabled(true);
+            p2Ice3.setEnabled(true);
+        } else if (p2IceWins == 2) {
+            p2Ice1.setEnabled(true);
+            p2Ice2.setEnabled(true);
+        } else if (p2IceWins == 1) {
+            p2Ice1.setEnabled(true);
+        }
+        if (p1FireWins == 3 || p1WaterWins == 3 || p1IceWins == 3 || (p1FireWins >= 1 && p1WaterWins >= 1 && p1IceWins >= 1)) {
+            System.out.println("p1 wins");
+        }
+        if (p2FireWins == 3 || p2WaterWins == 3 || p2IceWins == 3 || (p2FireWins == 1 && p2WaterWins == 1 && p2IceWins == 1)) {
+            System.out.println("p2 wins");
+        }
     }
 
     public void shuffleCards(int remove) {
@@ -348,6 +435,7 @@ public class Elementalists {
         JPanel = new JPanel();
         JPanel.setLayout(new GridBagLayout());
         JPanel.setBackground(new Color(-4149));
+        JPanel.setEnabled(false);
         JPanel.setForeground(new Color(-4149));
         p2Fire1 = new JLabel();
         p2Fire1.setAlignmentY(0.0f);
@@ -705,6 +793,7 @@ public class Elementalists {
         JPanel.add(p1Card5, gbc);
         p1Fire1 = new JLabel();
         p1Fire1.setAlignmentY(0.0f);
+        p1Fire1.setDoubleBuffered(true);
         p1Fire1.setEnabled(false);
         p1Fire1.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
         p1Fire1.setMaximumSize(new Dimension(30, 30));
