@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Elementalists {
     private JPanel JPanel;
@@ -68,11 +69,11 @@ public class Elementalists {
         p1Card4.setIcon(imageIcons[player1.get(3)]);
         p1Card5.setIcon(imageIcons[player1.get(4)]);
         //REMOVE PLAYER 2 SET ICON BEFORE SUBMITTING
-        p2Card1.setIcon(imageIcons[player2.get(0)]);
-        p2Card2.setIcon(imageIcons[player2.get(1)]);
-        p2Card3.setIcon(imageIcons[player2.get(2)]);
-        p2Card4.setIcon(imageIcons[player2.get(3)]);
-        p2Card5.setIcon(imageIcons[player2.get(4)]);
+        //p2Card1.setIcon(imageIcons[player2.get(0)]);
+        //p2Card2.setIcon(imageIcons[player2.get(1)]);
+        //p2Card3.setIcon(imageIcons[player2.get(2)]);
+        //p2Card4.setIcon(imageIcons[player2.get(3)]);
+        //p2Card5.setIcon(imageIcons[player2.get(4)]);
 
         p1Card1.addActionListener(new ActionListener() {
             @Override
@@ -146,19 +147,30 @@ public class Elementalists {
         long start = System.currentTimeMillis();
         long endTime = start + ms;
 
-        while(start < endTime) {
+        while (start < endTime) {
             start = System.currentTimeMillis();
         }
     }
 
     public void compareCards(int player1int) {
-        int player2int = player2.get(0);
-        player2.remove(0);
 
         ImageIcon blueAttack = new ImageIcon(attack1 + "blueAttack.png");
         ImageIcon redDamage = new ImageIcon(attack2 + "redDamage.png");
         ImageIcon blueDamage = new ImageIcon(attack1 + "blueDamage.png");
         ImageIcon redAttack = new ImageIcon(attack2 + "redAttack.png");
+
+        canClick = false;
+        pause(1000);
+        int player2int = player2.get(0);
+        player2.remove(0);
+        int randomCard = ThreadLocalRandom.current().nextInt(1, 5 + 1);
+        if (randomCard == 1) p2Card1.setIcon(imageIcons[player2.get(0)]);
+        else if (randomCard == 2) p2Card2.setIcon(imageIcons[player2.get(0)]);
+        else if (randomCard == 3) p2Card3.setIcon(imageIcons[player2.get(0)]);
+        else if (randomCard == 4) p2Card4.setIcon(imageIcons[player2.get(0)]);
+        else if (randomCard == 5) p2Card5.setIcon(imageIcons[player2.get(0)]);
+        pause(1000);
+
 
         if (player1int >= 0 && player1int <= 9) { // p1 fire
             if (player2int >= 10 && player2int <= 19) { // p2 water
