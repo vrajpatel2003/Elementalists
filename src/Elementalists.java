@@ -40,7 +40,6 @@ public class Elementalists {
     private JLabel p1Ice1;
     private JLabel action;
 
-
     //REMOVE "/src" FROM ALL 3 PATHS BEFORE SUBMITTING
     String firePath = "./src/img/cards/Fire/";
     String waterPath = "./src/img/cards/Water/";
@@ -50,7 +49,13 @@ public class Elementalists {
     ImageIcon[] imageIcons = new ImageIcon[30];
     ArrayList<Integer> player1;
     ArrayList<Integer> player2;
-    Boolean canClick = true;
+    boolean canClick = true;
+    int p1FireWins = 0;
+    int p1WaterWins = 0;
+    int p1IceWins = 0;
+    int p2FireWins = 0;
+    int p2WaterWins = 0;
+    int p2IceWins = 0;
 
     public Elementalists() {
         for (int i = 0; i < imageIcons.length; i++) {
@@ -62,6 +67,7 @@ public class Elementalists {
                 imageIcons[i] = new ImageIcon(icePath + "Ice" + (i - 19) + ".png");
             }
         }
+
         player1 = randomizeCards();
         player2 = randomizeCards();
         p1Card1.setIcon(imageIcons[player1.get(0)]);
@@ -69,34 +75,30 @@ public class Elementalists {
         p1Card3.setIcon(imageIcons[player1.get(2)]);
         p1Card4.setIcon(imageIcons[player1.get(3)]);
         p1Card5.setIcon(imageIcons[player1.get(4)]);
-        //REMOVE PLAYER 2 SET ICON BEFORE SUBMITTING
-        //p2Card1.setIcon(imageIcons[player2.get(0)]);
-        //p2Card2.setIcon(imageIcons[player2.get(1)]);
-        //p2Card3.setIcon(imageIcons[player2.get(2)]);
-        //p2Card4.setIcon(imageIcons[player2.get(3)]);
-        //p2Card5.setIcon(imageIcons[player2.get(4)]);
+
 
         p1Card1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     if (canClick) {
-                        shuffleCards(0);
                         compareCards(player1.get(0));
+                        shuffleCards(0);
                     }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
                 }
             }
         });
-
         p1Card2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     if (canClick) {
-                        shuffleCards(1);
+                        canClick = false;
+                        pause(1000);
                         compareCards(player1.get(1));
+                        shuffleCards(1);
                     }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
@@ -108,8 +110,10 @@ public class Elementalists {
             public void actionPerformed(ActionEvent e) {
                 try {
                     if (canClick) {
-                        shuffleCards(2);
+                        canClick = false;
+                        pause(1000);
                         compareCards(player1.get(2));
+                        shuffleCards(2);
                     }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
@@ -121,8 +125,10 @@ public class Elementalists {
             public void actionPerformed(ActionEvent e) {
                 try {
                     if (canClick) {
-                        shuffleCards(3);
+                        canClick = false;
+                        pause(1000);
                         compareCards(player1.get(3));
+                        shuffleCards(3);
                     }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
@@ -134,8 +140,10 @@ public class Elementalists {
             public void actionPerformed(ActionEvent e) {
                 try {
                     if (canClick) {
-                        shuffleCards(4);
+                        canClick = false;
+                        pause(1000);
                         compareCards(player1.get(4));
+                        shuffleCards(4);
                     }
                 } catch (IndexOutOfBoundsException ex) {
                     JOptionPane.showMessageDialog(null, "game over");
@@ -159,101 +167,111 @@ public class Elementalists {
         ImageIcon redDamage = new ImageIcon(attack2 + "redDamage.png");
         ImageIcon blueDamage = new ImageIcon(attack1 + "blueDamage.png");
         ImageIcon redAttack = new ImageIcon(attack2 + "redAttack.png");
+        ImageIcon cardBack = new ImageIcon("./src/img/cards/cardback.png");
 
-        canClick = false;
-        pause(250);
         int player2int = player2.get(0);
-        player2.remove(0);
         int randomCard = ThreadLocalRandom.current().nextInt(1, 5 + 1);
         if (randomCard == 1) p2Card1.setIcon(imageIcons[player2.get(0)]);
         else if (randomCard == 2) p2Card2.setIcon(imageIcons[player2.get(0)]);
         else if (randomCard == 3) p2Card3.setIcon(imageIcons[player2.get(0)]);
         else if (randomCard == 4) p2Card4.setIcon(imageIcons[player2.get(0)]);
         else if (randomCard == 5) p2Card5.setIcon(imageIcons[player2.get(0)]);
-        pause(250);
 
-
-        if (player1int >= 0 && player1int <= 9) { // p1 fire
-            if (player2int >= 10 && player2int <= 19) { // p2 water
-                // player2 win
-                player1Icon.setIcon(blueDamage);
-                player2Icon.setIcon(redAttack);
-                action.setText("The enemy attacked you with a water type move!");
-            } else if (player2int >= 20 && player2int <= 29) { // p2 ice
-                // player win
-                player1Icon.setIcon(blueAttack);
-                player2Icon.setIcon(redDamage);
-                action.setText("You attacked the enemy with a fire type move!");
-            } else if (player2int >= 0 && player2int <= 9) { // p2 fire
-                if (player1int > player2int) {
-                    //player win
-                    player1Icon.setIcon(blueAttack);
-                    player2Icon.setIcon(redDamage);
-                    action.setText("You attacked the enemy with a stronger fire type move!");
-                } else {
-                    //player2 win
-                    player1Icon.setIcon(blueDamage);
-                    player2Icon.setIcon(redAttack);
-                    action.setText("The enemy attacked you with a stronger fire type move!");
-                }
-            }
-
-        } else if (player1int >= 10 && player1int <= 19) { // p1 water
-            //player2 win
-            player1Icon.setIcon(blueDamage);
-            player2Icon.setIcon(redAttack);
-            if (player2int >= 0 && player2int <= 9) { // p2 fire
-                // player win
-                player1Icon.setIcon(blueAttack);
-                player2Icon.setIcon(redDamage);
-                action.setText("You attacked the enemy with a fire attack!");
-            } else if (player2int >= 20 && player2int <= 29) { // p2 ice
-                // player2 win
-                player1Icon.setIcon(blueDamage);
-                player2Icon.setIcon(redAttack);
+        if (player1int >= 0 && player1int <= 9) {
+            if (player2int >= 10 && player2int <= 19) {
                 action.setText("The enemy attacked you with a water attack!");
-            } else if (player2int >= 10 && player2int <= 19) { // p2 water
-                if (player1int > player2int) {
-                    //player win
-                    player1Icon.setIcon(blueAttack);
-                    player2Icon.setIcon(redDamage);
-                    action.setText("You attacked the enemy with a stronger water attack!");
-                } else {
-                    //player2 win
-                    player1Icon.setIcon(blueDamage);
-                    player2Icon.setIcon(redAttack);
-                    action.setText("The enemy attacked you with a stronger water attack.");
-                }
-            }
-
-        } else if (player1int >= 20 && player1int <= 29) { // p1 ice
-            if (player2int >= 0 && player2int <= 9) { // p2 fire
-                // player2 win
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
-                action.setText("The enemy attacked you with a fire attack.");
-            } else if (player2int >= 10 && player2int <= 19) { // p2 water
-                // player win
+                p2WaterWins++;
+            } else if (player2int >= 20 && player2int <= 29) {
+                action.setText("You attacked the enemy with a fire attack!");
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
-                action.setText("You attacked the enemy with an ice attack!");
-            } else if (player2int >= 20 && player2int <= 29) { // p2 ice
+                p1FireWins++;
+            } else if (player2int >= 0 && player2int <= 9) {
                 if (player1int > player2int) {
-                    //player win
+                    action.setText("You attacked the enemy with a stronger fire attack!");
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
-                    action.setText("You attacked the enemy with a stronger ice attack!");
-                } else {
-                    //player2 win
+                    p1FireWins++;
+                } else if (player1int < player2int) {
+                    action.setText("The enemy attacked you with a stronger fire attack!");
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
-                    action.setText("The enemy attacked you with a stronger ice attack!");
+                    p2FireWins++;
+                } else {
+                    action.setText("Both you and the enemy fizzled!");
                 }
             }
         }
+        else if (player1int >= 10 && player1int <= 19) {
+            if (player2int >= 0 && player2int <= 9) {
+                action.setText("You attacked the enemy with a water attack!");
+                player1Icon.setIcon(blueAttack);
+                player2Icon.setIcon(redDamage);
+                p1WaterWins++;
+            } else if (player2int >= 20 && player2int <= 29) {
+                action.setText("The enemy attacked you with a ice attack!");
+                player1Icon.setIcon(blueDamage);
+                player2Icon.setIcon(redAttack);
+                p2IceWins++;
+            } else if (player2int >= 10 && player2int <= 19) {
+                if (player1int > player2int) {
+                    action.setText("You attacked the enemy with a stronger water attack!");
+                    player1Icon.setIcon(blueAttack);
+                    player2Icon.setIcon(redDamage);
+                    p1WaterWins++;
+                } else if (player1int < player2int) {
+                    action.setText("The enemy attacked you with a stronger water attack!");
+                    player1Icon.setIcon(blueDamage);
+                    player2Icon.setIcon(redAttack);
+                    p2WaterWins++;
+                } else {
+                    action.setText("Both you and the enemy fizzled!");
+                }
+            }
+        }
+        else if (player1int >= 20 && player1int <= 29) {
+            if (player2int >= 0 && player2int <= 9) {
+                action.setText("The enemy attacked you with a fire attack!");
+                player1Icon.setIcon(blueDamage);
+                player2Icon.setIcon(redAttack);
+                p2FireWins++;
+            } else if (player2int >= 10 && player2int <= 19) {
+                action.setText("You attacked the enemy with an ice attack!");
+                player1Icon.setIcon(blueAttack);
+                player2Icon.setIcon(redDamage);
+                p1IceWins++;
+            } else if (player2int >= 20 && player2int <= 29) {
+                if (player1int > player2int) {
+                    action.setText("You attacked the enemy with a stronger ice attack!");
+                    player1Icon.setIcon(blueAttack);
+                    player2Icon.setIcon(redDamage);
+                    p1IceWins++;
+                } else if (player1int < player2int) {
+                    action.setText("The enemy attacked you with a stronger ice attack!");
+                    player1Icon.setIcon(blueDamage);
+                    player2Icon.setIcon(redAttack);
+                    p2IceWins++;
+                } else {
+                    action.setText("Both you and the enemy fizzled!");
+                }
+            }
+        }
+
+        canClick = true;
+
+        p2Card1.setIcon(cardBack);
+        p2Card2.setIcon(cardBack);
+        p2Card3.setIcon(cardBack);
+        p2Card4.setIcon(cardBack);
+        p2Card5.setIcon(cardBack);
+
+        player2.remove(0);
     }
 
     public void shuffleCards(int remove) {
+
         int a = player1.size();
         player1.remove(remove);
         if (a > 5) {
@@ -293,7 +311,6 @@ public class Elementalists {
             p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
             p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
         }
-
     }
 
     public static ArrayList<Integer> randomizeCards() {
@@ -334,6 +351,7 @@ public class Elementalists {
         JPanel.setForeground(new Color(-4149));
         p2Fire1 = new JLabel();
         p2Fire1.setAlignmentY(0.0f);
+        p2Fire1.setEnabled(false);
         p2Fire1.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
         p2Fire1.setMaximumSize(new Dimension(30, 30));
         p2Fire1.setMinimumSize(new Dimension(0, 0));
@@ -348,6 +366,7 @@ public class Elementalists {
         JPanel.add(p2Fire1, gbc);
         p2Fire2 = new JLabel();
         p2Fire2.setAlignmentY(0.0f);
+        p2Fire2.setEnabled(false);
         p2Fire2.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
         p2Fire2.setMaximumSize(new Dimension(30, 30));
         p2Fire2.setMinimumSize(new Dimension(0, 0));
@@ -360,6 +379,7 @@ public class Elementalists {
         JPanel.add(p2Fire2, gbc);
         p2Fire3 = new JLabel();
         p2Fire3.setAlignmentY(0.0f);
+        p2Fire3.setEnabled(false);
         p2Fire3.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
         p2Fire3.setMaximumSize(new Dimension(30, 30));
         p2Fire3.setMinimumSize(new Dimension(0, 0));
@@ -373,6 +393,7 @@ public class Elementalists {
         JPanel.add(p2Fire3, gbc);
         p2Water1 = new JLabel();
         p2Water1.setAlignmentY(0.0f);
+        p2Water1.setEnabled(false);
         p2Water1.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
         p2Water1.setMaximumSize(new Dimension(30, 30));
         p2Water1.setMinimumSize(new Dimension(0, 0));
@@ -386,6 +407,7 @@ public class Elementalists {
         JPanel.add(p2Water1, gbc);
         p2Water2 = new JLabel();
         p2Water2.setAlignmentY(0.0f);
+        p2Water2.setEnabled(false);
         p2Water2.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
         p2Water2.setMaximumSize(new Dimension(30, 30));
         p2Water2.setMinimumSize(new Dimension(0, 0));
@@ -398,6 +420,7 @@ public class Elementalists {
         JPanel.add(p2Water2, gbc);
         p2Water3 = new JLabel();
         p2Water3.setAlignmentY(0.0f);
+        p2Water3.setEnabled(false);
         p2Water3.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
         p2Water3.setMaximumSize(new Dimension(30, 30));
         p2Water3.setMinimumSize(new Dimension(0, 0));
@@ -411,6 +434,7 @@ public class Elementalists {
         JPanel.add(p2Water3, gbc);
         p2Ice2 = new JLabel();
         p2Ice2.setAlignmentY(0.0f);
+        p2Ice2.setEnabled(false);
         p2Ice2.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
         p2Ice2.setMaximumSize(new Dimension(30, 30));
         p2Ice2.setMinimumSize(new Dimension(0, 0));
@@ -423,6 +447,7 @@ public class Elementalists {
         JPanel.add(p2Ice2, gbc);
         p2Ice3 = new JLabel();
         p2Ice3.setAlignmentY(0.0f);
+        p2Ice3.setEnabled(false);
         p2Ice3.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
         p2Ice3.setMaximumSize(new Dimension(30, 30));
         p2Ice3.setMinimumSize(new Dimension(0, 0));
@@ -542,6 +567,7 @@ public class Elementalists {
         JPanel.add(label1, gbc);
         p2Ice1 = new JLabel();
         p2Ice1.setAlignmentY(0.0f);
+        p2Ice1.setEnabled(false);
         p2Ice1.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
         p2Ice1.setMaximumSize(new Dimension(30, 30));
         p2Ice1.setMinimumSize(new Dimension(0, 0));
@@ -679,6 +705,7 @@ public class Elementalists {
         JPanel.add(p1Card5, gbc);
         p1Fire1 = new JLabel();
         p1Fire1.setAlignmentY(0.0f);
+        p1Fire1.setEnabled(false);
         p1Fire1.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
         p1Fire1.setMaximumSize(new Dimension(30, 30));
         p1Fire1.setMinimumSize(new Dimension(0, 0));
@@ -692,6 +719,7 @@ public class Elementalists {
         JPanel.add(p1Fire1, gbc);
         p1Fire2 = new JLabel();
         p1Fire2.setAlignmentY(0.0f);
+        p1Fire2.setEnabled(false);
         p1Fire2.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
         p1Fire2.setMaximumSize(new Dimension(30, 30));
         p1Fire2.setMinimumSize(new Dimension(0, 0));
@@ -704,6 +732,7 @@ public class Elementalists {
         JPanel.add(p1Fire2, gbc);
         p1Fire3 = new JLabel();
         p1Fire3.setAlignmentY(0.0f);
+        p1Fire3.setEnabled(false);
         p1Fire3.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
         p1Fire3.setMaximumSize(new Dimension(30, 30));
         p1Fire3.setMinimumSize(new Dimension(0, 0));
@@ -717,6 +746,7 @@ public class Elementalists {
         JPanel.add(p1Fire3, gbc);
         p1Water1 = new JLabel();
         p1Water1.setAlignmentY(0.0f);
+        p1Water1.setEnabled(false);
         p1Water1.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
         p1Water1.setMaximumSize(new Dimension(30, 30));
         p1Water1.setMinimumSize(new Dimension(0, 0));
@@ -730,6 +760,7 @@ public class Elementalists {
         JPanel.add(p1Water1, gbc);
         p1Water2 = new JLabel();
         p1Water2.setAlignmentY(0.0f);
+        p1Water2.setEnabled(false);
         p1Water2.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
         p1Water2.setMaximumSize(new Dimension(30, 30));
         p1Water2.setMinimumSize(new Dimension(0, 0));
@@ -742,6 +773,7 @@ public class Elementalists {
         JPanel.add(p1Water2, gbc);
         p1Water3 = new JLabel();
         p1Water3.setAlignmentY(0.0f);
+        p1Water3.setEnabled(false);
         p1Water3.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
         p1Water3.setMaximumSize(new Dimension(30, 30));
         p1Water3.setMinimumSize(new Dimension(0, 0));
@@ -755,6 +787,7 @@ public class Elementalists {
         JPanel.add(p1Water3, gbc);
         p1Ice2 = new JLabel();
         p1Ice2.setAlignmentY(0.0f);
+        p1Ice2.setEnabled(false);
         p1Ice2.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
         p1Ice2.setMaximumSize(new Dimension(30, 30));
         p1Ice2.setMinimumSize(new Dimension(0, 0));
@@ -767,6 +800,7 @@ public class Elementalists {
         JPanel.add(p1Ice2, gbc);
         p1Ice3 = new JLabel();
         p1Ice3.setAlignmentY(0.0f);
+        p1Ice3.setEnabled(false);
         p1Ice3.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
         p1Ice3.setMaximumSize(new Dimension(30, 30));
         p1Ice3.setMinimumSize(new Dimension(0, 0));
@@ -780,6 +814,7 @@ public class Elementalists {
         JPanel.add(p1Ice3, gbc);
         p1Ice1 = new JLabel();
         p1Ice1.setAlignmentY(0.0f);
+        p1Ice1.setEnabled(false);
         p1Ice1.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
         p1Ice1.setMaximumSize(new Dimension(30, 30));
         p1Ice1.setMinimumSize(new Dimension(0, 0));
