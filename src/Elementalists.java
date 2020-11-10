@@ -344,13 +344,6 @@ public class Elementalists {
     }
 
     public void checkWinner() {
-        System.out.println(p1FireWins);
-        System.out.println(p1WaterWins);
-        System.out.println(p1IceWins);
-        System.out.println(p2FireWins);
-        System.out.println(p2WaterWins);
-        System.out.println(p2IceWins);
-        System.out.println("----");
 
         if (p1FireWins == 3) {
             p1Fire1.setEnabled(true);
