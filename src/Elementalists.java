@@ -38,6 +38,7 @@ public class Elementalists {
     private JLabel p1Ice2;
     private JLabel p1Ice3;
     private JLabel p1Ice1;
+    private JLabel action;
 
 
     //REMOVE "/src" FROM ALL 3 PATHS BEFORE SUBMITTING
@@ -160,7 +161,7 @@ public class Elementalists {
         ImageIcon redAttack = new ImageIcon(attack2 + "redAttack.png");
 
         canClick = false;
-        pause(1000);
+        pause(250);
         int player2int = player2.get(0);
         player2.remove(0);
         int randomCard = ThreadLocalRandom.current().nextInt(1, 5 + 1);
@@ -169,7 +170,7 @@ public class Elementalists {
         else if (randomCard == 3) p2Card3.setIcon(imageIcons[player2.get(0)]);
         else if (randomCard == 4) p2Card4.setIcon(imageIcons[player2.get(0)]);
         else if (randomCard == 5) p2Card5.setIcon(imageIcons[player2.get(0)]);
-        pause(1000);
+        pause(250);
 
 
         if (player1int >= 0 && player1int <= 9) { // p1 fire
@@ -177,19 +178,23 @@ public class Elementalists {
                 // player2 win
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
+                action.setText("The enemy attacked you with a water type move!");
             } else if (player2int >= 20 && player2int <= 29) { // p2 ice
                 // player win
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
+                action.setText("You attacked the enemy with a fire type move!");
             } else if (player2int >= 0 && player2int <= 9) { // p2 fire
                 if (player1int > player2int) {
                     //player win
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
+                    action.setText("You attacked the enemy with a stronger fire type move!");
                 } else {
                     //player2 win
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
+                    action.setText("The enemy attacked you with a stronger fire type move!");
                 }
             }
 
@@ -201,19 +206,23 @@ public class Elementalists {
                 // player win
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
+                action.setText("You attacked the enemy with a fire attack!");
             } else if (player2int >= 20 && player2int <= 29) { // p2 ice
                 // player2 win
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
+                action.setText("The enemy attacked you with a water attack!");
             } else if (player2int >= 10 && player2int <= 19) { // p2 water
                 if (player1int > player2int) {
                     //player win
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
+                    action.setText("You attacked the enemy with a stronger water attack!");
                 } else {
                     //player2 win
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
+                    action.setText("The enemy attacked you with a stronger water attack.");
                 }
             }
 
@@ -222,19 +231,23 @@ public class Elementalists {
                 // player2 win
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
+                action.setText("The enemy attacked you with a fire attack.");
             } else if (player2int >= 10 && player2int <= 19) { // p2 water
                 // player win
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
+                action.setText("You attacked the enemy with an ice attack!");
             } else if (player2int >= 20 && player2int <= 29) { // p2 ice
                 if (player1int > player2int) {
                     //player win
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
+                    action.setText("You attacked the enemy with a stronger ice attack!");
                 } else {
                     //player2 win
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
+                    action.setText("The enemy attacked you with a stronger ice attack!");
                 }
             }
         }
@@ -549,17 +562,17 @@ public class Elementalists {
         gbc.gridwidth = 5;
         gbc.insets = new Insets(30, 0, 0, 0);
         JPanel.add(player2Icon, gbc);
-        final JLabel label2 = new JLabel();
-        Font label2Font = this.$$$getFont$$$("Arial", -1, 20, label2.getFont());
-        if (label2Font != null) label2.setFont(label2Font);
-        label2.setForeground(new Color(-16777216));
-        label2.setText("Actions Performed");
+        action = new JLabel();
+        Font actionFont = this.$$$getFont$$$("Arial", -1, 20, action.getFont());
+        if (actionFont != null) action.setFont(actionFont);
+        action.setForeground(new Color(-16777216));
+        action.setText("Actions Performed");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
         gbc.gridy = 1;
         gbc.gridwidth = 4;
         gbc.gridheight = 3;
-        JPanel.add(label2, gbc);
+        JPanel.add(action, gbc);
         player1Icon = new JLabel();
         player1Icon.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueIdle.png")));
         player1Icon.setText("");
