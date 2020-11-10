@@ -6,6 +6,7 @@
     </constraints>
     <properties>
       <background color="-4149"/>
+      <enabled value="false"/>
       <foreground color="-4149"/>
     </properties>
     <border type="none"/>
@@ -17,6 +18,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/FireIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -31,6 +33,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/FireIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -45,6 +48,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/FireIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -59,6 +63,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/WaterIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -73,6 +78,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/WaterIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -87,6 +93,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/WaterIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -101,6 +108,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/IceIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -115,6 +123,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/IceIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -240,6 +249,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/IceIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -257,7 +267,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="b072d" class="javax.swing.JLabel">
+      <component id="b072d" class="javax.swing.JLabel" binding="action">
         <constraints>
           <grid row="1" column="3" row-span="3" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
@@ -385,6 +395,8 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <doubleBuffered value="true"/>
+          <enabled value="false"/>
           <icon value="img/icons/FireIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -399,6 +411,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/FireIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -413,6 +426,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/FireIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -427,6 +441,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/WaterIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -441,6 +456,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/WaterIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -455,6 +471,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/WaterIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -469,6 +486,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/IceIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -483,6 +501,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/IceIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
@@ -497,6 +516,7 @@
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
+          <enabled value="false"/>
           <icon value="img/icons/IceIcon.png"/>
           <maximumSize width="30" height="30"/>
           <minimumSize width="0" height="0"/>
