@@ -13,19 +13,15 @@ public class LoserScreen {
     private JButton quitGameButton;
     private JPanel defeatPanel;
     private JLabel lblRank;
-    static JFrame frame = new JFrame("MyForm");
+    static JFrame frame = new JFrame("You Lost :(");
 
     public LoserScreen() {
         rankCheck();
         playAgainButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                JFrame game = new JFrame("MyForm");
-                game.setContentPane(new Elementalists().getJPanel());
-                game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                game.pack();
-                game.setVisible(true);
+                StartMenu.frame.setContentPane(new Elementalists().getJPanel());
+                StartMenu.frame.pack();
             }
         });
 

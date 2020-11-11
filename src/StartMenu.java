@@ -9,7 +9,7 @@ public class StartMenu {
     private JButton startGameButton;
     private JPanel startMenu;
     private JLabel lblRank;
-    static JFrame frame = new JFrame("MyForm");
+    public static JFrame frame = new JFrame("Elementalists");
 
 
     public StartMenu() {
@@ -17,12 +17,8 @@ public class StartMenu {
         startGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                JFrame game = new JFrame("MyForm");
-                game.setContentPane(new Elementalists().getJPanel());
-                game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                game.pack();
-                game.setVisible(true);
+                frame.setContentPane(new Elementalists().getJPanel());
+                frame.pack();
             }
         });
     }

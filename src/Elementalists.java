@@ -39,7 +39,7 @@ public class Elementalists {
     private JLabel p1Ice3;
     private JLabel p1Ice1;
     private JLabel action;
-    static JFrame frame = new JFrame("MyForm");
+//    static JFrame frame = new JFrame("Elementalists");
 
     //REMOVE "/src" FROM ALL 3 PATHS BEFORE SUBMITTING
     String firePath = "./src/img/cards/Fire/";
@@ -345,38 +345,22 @@ public class Elementalists {
     }
 
     Timer toWinnerScreen = new Timer(2000, new ActionListener() {
-        @Override
         public void actionPerformed(ActionEvent e) {
-            winGame();
+            System.out.println("TIMER IS RUNNING");
+            StartMenu.frame.setContentPane(new WinnerScreen().getJPanel());
+            StartMenu.frame.pack();
             toWinnerScreen.stop();
         }
     });
 
-    public static void winGame() {
-        JFrame game = new JFrame("MyForm");
-        game.setContentPane(new WinnerScreen().getJPanel());
-        game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        game.pack();
-        game.setVisible(true);
-        frame.dispose();
-    }
-
     Timer toLoserScreen = new Timer(2000, new ActionListener() {
-        @Override
         public void actionPerformed(ActionEvent e) {
-            loseGame();
+            System.out.println("TIMER IS RUNNING");
+            StartMenu.frame.setContentPane(new LoserScreen().getJPanel());
+            StartMenu.frame.pack();
             toLoserScreen.stop();
         }
     });
-
-    public static void loseGame() {
-        JFrame game = new JFrame("MyForm");
-        game.setContentPane(new LoserScreen().getJPanel());
-        game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        game.pack();
-        game.setVisible(true);
-        frame.dispose();
-    }
 
     public void checkWinner() {
         if (p1FireWins == 3) {
@@ -446,7 +430,6 @@ public class Elementalists {
         }
         if (p2FireWins == 3 || p2WaterWins == 3 || p2IceWins == 3 || (p2FireWins == 1 && p2WaterWins == 1 && p2IceWins == 1)) {
             action.setText("You lost the game... :(");
-            toWinnerScreen.start();
             toLoserScreen.start();
         }
     }
@@ -470,6 +453,7 @@ public class Elementalists {
     }
 
     public static void main(String[] args) {
+        JFrame frame = new JFrame("MyGameForm");
         frame.setContentPane(new Elementalists().jPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
@@ -682,7 +666,7 @@ public class Elementalists {
         Font actionFont = this.$$$getFont$$$("Arial", -1, 20, action.getFont());
         if (actionFont != null) action.setFont(actionFont);
         action.setForeground(new Color(-16777216));
-        action.setText("Please Fullscreen for Optimal Experiene");
+        action.setText("Please Fullscreen for Optimal Experience");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
         gbc.gridy = 1;

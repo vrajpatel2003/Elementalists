@@ -13,19 +13,15 @@ public class WinnerScreen {
     private JButton quitGameButton;
     private JPanel victoryPanel;
     private JLabel lblRank;
-    static JFrame frame = new JFrame("MyForm");
+    static JFrame frame = new JFrame("You Won :)");
 
     public WinnerScreen() {
         rankCheck();
         playAgainButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                JFrame game = new JFrame("MyForm");
-                game.setContentPane(new Elementalists().getJPanel());
-                game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                game.pack();
-                game.setVisible(true);
+                StartMenu.frame.setContentPane(new Elementalists().getJPanel());
+                StartMenu.frame.pack();
             }
         });
         quitGameButton.addActionListener(new ActionListener() {
