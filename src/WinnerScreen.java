@@ -13,6 +13,7 @@ public class WinnerScreen {
     private JButton quitGameButton;
     private JPanel victoryPanel;
     private JLabel lblRank;
+    private JLabel rankUpMessage;
     static JFrame frame = new JFrame("You Won :)");
 
     public WinnerScreen() {
@@ -22,6 +23,7 @@ public class WinnerScreen {
             public void actionPerformed(ActionEvent e) {
                 StartMenu.frame.setContentPane(new Elementalists().getJPanel());
                 StartMenu.frame.pack();
+                StartMenu.frame.setLocationRelativeTo(null);
             }
         });
         quitGameButton.addActionListener(new ActionListener() {
@@ -40,6 +42,7 @@ public class WinnerScreen {
         frame.setContentPane(new WinnerScreen().victoryPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
@@ -68,6 +71,10 @@ public class WinnerScreen {
                 writer.close();
             } else {
                 lblRank.setText("Current Rank: " + fileLines.get(0));
+            }
+
+            if (fileLines.get(0).equals("Grandmaster")) {
+                rankUpMessage.setText("Congratulations! You are now the ultimate wizard.");
             }
 
         } catch (IOException e) {
@@ -128,14 +135,14 @@ public class WinnerScreen {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.insets = new Insets(25, 25, 25, 25);
         victoryPanel.add(label3, gbc);
-        final JLabel label4 = new JLabel();
-        label4.setText("You have ranked up!");
+        rankUpMessage = new JLabel();
+        rankUpMessage.setText("You have ranked up!");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.gridwidth = 2;
         gbc.insets = new Insets(25, 25, 5, 25);
-        victoryPanel.add(label4, gbc);
+        victoryPanel.add(rankUpMessage, gbc);
         lblRank = new JLabel();
         lblRank.setText("You are now a [RANK]!");
         gbc = new GridBagConstraints();

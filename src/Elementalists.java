@@ -349,6 +349,7 @@ public class Elementalists {
             System.out.println("TIMER IS RUNNING");
             StartMenu.frame.setContentPane(new WinnerScreen().getJPanel());
             StartMenu.frame.pack();
+            StartMenu.frame.setLocationRelativeTo(null);
             toWinnerScreen.stop();
         }
     });
@@ -358,6 +359,7 @@ public class Elementalists {
             System.out.println("TIMER IS RUNNING");
             StartMenu.frame.setContentPane(new LoserScreen().getJPanel());
             StartMenu.frame.pack();
+            StartMenu.frame.setLocationRelativeTo(null);
             toLoserScreen.stop();
         }
     });
@@ -457,6 +459,7 @@ public class Elementalists {
         frame.setContentPane(new Elementalists().jPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 

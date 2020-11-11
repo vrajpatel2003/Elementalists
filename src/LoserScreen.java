@@ -13,6 +13,7 @@ public class LoserScreen {
     private JButton quitGameButton;
     private JPanel defeatPanel;
     private JLabel lblRank;
+    private JLabel rankUpMessage;
     static JFrame frame = new JFrame("You Lost :(");
 
     public LoserScreen() {
@@ -22,6 +23,7 @@ public class LoserScreen {
             public void actionPerformed(ActionEvent e) {
                 StartMenu.frame.setContentPane(new Elementalists().getJPanel());
                 StartMenu.frame.pack();
+                StartMenu.frame.setLocationRelativeTo(null);
             }
         });
 
@@ -41,6 +43,7 @@ public class LoserScreen {
         frame.setContentPane(new LoserScreen().defeatPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
@@ -58,6 +61,10 @@ public class LoserScreen {
             }
 
             lblRank.setText("Current Rank: " + fileLines.get(0));
+
+            if (fileLines.get(0).equals("Grandmaster")) {
+                rankUpMessage.setText("You may have lost, but you are still the ultimate wizard.");
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -117,14 +124,14 @@ public class LoserScreen {
         gbc.gridy = 1;
         gbc.insets = new Insets(25, 25, 25, 25);
         defeatPanel.add(label3, gbc);
-        final JLabel label4 = new JLabel();
-        label4.setText("Play again and win to rank up!");
+        rankUpMessage = new JLabel();
+        rankUpMessage.setText("Play again and win to rank up!");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.gridwidth = 2;
         gbc.insets = new Insets(25, 25, 5, 25);
-        defeatPanel.add(label4, gbc);
+        defeatPanel.add(rankUpMessage, gbc);
         lblRank = new JLabel();
         lblRank.setText("You are now a [RANK]!");
         gbc = new GridBagConstraints();

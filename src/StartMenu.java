@@ -19,6 +19,7 @@ public class StartMenu {
             public void actionPerformed(ActionEvent e) {
                 frame.setContentPane(new Elementalists().getJPanel());
                 frame.pack();
+                frame.setLocationRelativeTo(null);
             }
         });
     }
@@ -27,6 +28,7 @@ public class StartMenu {
         frame.setContentPane(new StartMenu().startMenu);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 

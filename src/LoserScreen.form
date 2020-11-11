@@ -40,7 +40,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="16b1e" class="javax.swing.JLabel">
+      <component id="16b1e" class="javax.swing.JLabel" binding="rankUpMessage">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag top="25" left="25" bottom="5" right="25" weightx="0.0" weighty="0.0"/>
