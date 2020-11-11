@@ -251,26 +251,26 @@ public class Elementalists {
 
         if (player1int >= 0 && player1int <= 9) {
             if (player2int >= 10 && player2int <= 19) {
-                action.setText("The enemy attacked you with a water attack!");
+                action.setText("Enemy attacked with a water attack!");
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
                 p2WaterWins++;
                 checkWinner();
             } else if (player2int >= 20 && player2int <= 29) {
-                action.setText("You attacked the enemy with a fire attack!");
+                action.setText("You attacked with a fire attack!");
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
                 p1FireWins++;
                 checkWinner();
             } else if (player2int >= 0 && player2int <= 9) {
                 if (player1int > player2int) {
-                    action.setText("You attacked the enemy with a stronger fire attack!");
+                    action.setText("You attacked with a stronger attack!");
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
                     p1FireWins++;
                     checkWinner();
                 } else if (player1int < player2int) {
-                    action.setText("The enemy attacked you with a stronger fire attack!");
+                    action.setText("Enemy attacked with a stronger attack!");
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
                     p2FireWins++;
@@ -281,26 +281,26 @@ public class Elementalists {
             }
         } else if (player1int >= 10 && player1int <= 19) {
             if (player2int >= 0 && player2int <= 9) {
-                action.setText("You attacked the enemy with a water attack!");
+                action.setText("You attacked with a water attack!");
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
                 p1WaterWins++;
                 checkWinner();
             } else if (player2int >= 20 && player2int <= 29) {
-                action.setText("The enemy attacked you with a ice attack!");
+                action.setText("Enemy attacked with a ice attack!");
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
                 p2IceWins++;
                 checkWinner();
             } else if (player2int >= 10 && player2int <= 19) {
                 if (player1int > player2int) {
-                    action.setText("You attacked the enemy with a stronger water attack!");
+                    action.setText("You attacked with a stronger attack!");
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
                     p1WaterWins++;
                     checkWinner();
                 } else if (player1int < player2int) {
-                    action.setText("The enemy attacked you with a stronger water attack!");
+                    action.setText("Enemy attacked with a stronger attack!");
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
                     p2WaterWins++;
@@ -311,26 +311,26 @@ public class Elementalists {
             }
         } else if (player1int >= 20 && player1int <= 29) {
             if (player2int >= 0 && player2int <= 9) {
-                action.setText("The enemy attacked you with a fire attack!");
+                action.setText("Enemy attacked with a fire attack!");
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
                 p2FireWins++;
                 checkWinner();
             } else if (player2int >= 10 && player2int <= 19) {
-                action.setText("You attacked the enemy with an ice attack!");
+                action.setText("You attacked with an ice attack!");
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
                 p1IceWins++;
                 checkWinner();
             } else if (player2int >= 20 && player2int <= 29) {
                 if (player1int > player2int) {
-                    action.setText("You attacked the enemy with a stronger ice attack!");
+                    action.setText("You attacked with a stronger attack!");
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
                     p1IceWins++;
                     checkWinner();
                 } else if (player1int < player2int) {
-                    action.setText("The enemy attacked you with a stronger ice attack!");
+                    action.setText("Enemy attacked with a stronger attack!");
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
                     p2IceWins++;
@@ -441,15 +441,12 @@ public class Elementalists {
         }
 
         if (p1FireWins == 3 || p1WaterWins == 3 || p1IceWins == 3 || (p1FireWins >= 1 && p1WaterWins >= 1 && p1IceWins >= 1)) {
-            String newText = action.getText();
-            newText += " You won the game!!! :)";
-            action.setText(newText);
+            action.setText("You won the game!!! :)");
             toWinnerScreen.start();
         }
         if (p2FireWins == 3 || p2WaterWins == 3 || p2IceWins == 3 || (p2FireWins == 1 && p2WaterWins == 1 && p2IceWins == 1)) {
-            String newText = action.getText();
-            newText += " You lost the game... :(";
-            action.setText(newText);
+            action.setText("You lost the game... :(");
+            toWinnerScreen.start();
             toLoserScreen.start();
         }
     }
@@ -628,63 +625,6 @@ public class Elementalists {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(10, 15, 10, 5);
         jPanel.add(p2Card1, gbc);
-        p2Card2 = new JButton();
-        p2Card2.setAlignmentY(0.0f);
-        p2Card2.setAutoscrolls(false);
-        p2Card2.setBackground(new Color(-16777216));
-        p2Card2.setBorderPainted(false);
-        p2Card2.setForeground(new Color(-16777216));
-        p2Card2.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-        p2Card2.setIconTextGap(0);
-        p2Card2.setMaximumSize(new Dimension(100, 160));
-        p2Card2.setMinimumSize(new Dimension(100, 160));
-        p2Card2.setPreferredSize(new Dimension(100, 160));
-        p2Card2.setText("");
-        p2Card2.setVisible(true);
-        gbc = new GridBagConstraints();
-        gbc.gridx = 6;
-        gbc.gridy = 5;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(10, 5, 10, 5);
-        jPanel.add(p2Card2, gbc);
-        p2Card3 = new JButton();
-        p2Card3.setAlignmentY(0.0f);
-        p2Card3.setAutoscrolls(false);
-        p2Card3.setBackground(new Color(-16777216));
-        p2Card3.setBorderPainted(false);
-        p2Card3.setForeground(new Color(-16777216));
-        p2Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-        p2Card3.setIconTextGap(0);
-        p2Card3.setMaximumSize(new Dimension(100, 160));
-        p2Card3.setMinimumSize(new Dimension(100, 160));
-        p2Card3.setPreferredSize(new Dimension(100, 160));
-        p2Card3.setText("");
-        p2Card3.setVisible(true);
-        gbc = new GridBagConstraints();
-        gbc.gridx = 7;
-        gbc.gridy = 5;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(10, 5, 10, 5);
-        jPanel.add(p2Card3, gbc);
-        p2Card4 = new JButton();
-        p2Card4.setAlignmentY(0.0f);
-        p2Card4.setAutoscrolls(false);
-        p2Card4.setBackground(new Color(-16777216));
-        p2Card4.setBorderPainted(false);
-        p2Card4.setForeground(new Color(-16777216));
-        p2Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-        p2Card4.setIconTextGap(0);
-        p2Card4.setMaximumSize(new Dimension(100, 160));
-        p2Card4.setMinimumSize(new Dimension(100, 160));
-        p2Card4.setPreferredSize(new Dimension(100, 160));
-        p2Card4.setText("");
-        p2Card4.setVisible(true);
-        gbc = new GridBagConstraints();
-        gbc.gridx = 8;
-        gbc.gridy = 5;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(10, 5, 10, 5);
-        jPanel.add(p2Card4, gbc);
         p2Card5 = new JButton();
         p2Card5.setAlignmentY(0.0f);
         p2Card5.setAutoscrolls(false);
@@ -742,7 +682,7 @@ public class Elementalists {
         Font actionFont = this.$$$getFont$$$("Arial", -1, 20, action.getFont());
         if (actionFont != null) action.setFont(actionFont);
         action.setForeground(new Color(-16777216));
-        action.setText("Actions Performed");
+        action.setText("Please Fullscreen for Optimal Experiene");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
         gbc.gridy = 1;
@@ -977,6 +917,63 @@ public class Elementalists {
         gbc.anchor = GridBagConstraints.EAST;
         gbc.insets = new Insets(5, 0, 0, 0);
         jPanel.add(p1Ice1, gbc);
+        p2Card3 = new JButton();
+        p2Card3.setAlignmentY(0.0f);
+        p2Card3.setAutoscrolls(false);
+        p2Card3.setBackground(new Color(-16777216));
+        p2Card3.setBorderPainted(false);
+        p2Card3.setForeground(new Color(-16777216));
+        p2Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p2Card3.setIconTextGap(0);
+        p2Card3.setMaximumSize(new Dimension(100, 160));
+        p2Card3.setMinimumSize(new Dimension(100, 160));
+        p2Card3.setPreferredSize(new Dimension(100, 160));
+        p2Card3.setText("");
+        p2Card3.setVisible(true);
+        gbc = new GridBagConstraints();
+        gbc.gridx = 8;
+        gbc.gridy = 5;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(10, 5, 10, 5);
+        jPanel.add(p2Card3, gbc);
+        p2Card2 = new JButton();
+        p2Card2.setAlignmentY(0.0f);
+        p2Card2.setAutoscrolls(false);
+        p2Card2.setBackground(new Color(-16777216));
+        p2Card2.setBorderPainted(false);
+        p2Card2.setForeground(new Color(-16777216));
+        p2Card2.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p2Card2.setIconTextGap(0);
+        p2Card2.setMaximumSize(new Dimension(100, 160));
+        p2Card2.setMinimumSize(new Dimension(100, 160));
+        p2Card2.setPreferredSize(new Dimension(100, 160));
+        p2Card2.setText("");
+        p2Card2.setVisible(true);
+        gbc = new GridBagConstraints();
+        gbc.gridx = 7;
+        gbc.gridy = 5;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(10, 5, 10, 5);
+        jPanel.add(p2Card2, gbc);
+        p2Card4 = new JButton();
+        p2Card4.setAlignmentY(0.0f);
+        p2Card4.setAutoscrolls(false);
+        p2Card4.setBackground(new Color(-16777216));
+        p2Card4.setBorderPainted(false);
+        p2Card4.setForeground(new Color(-16777216));
+        p2Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p2Card4.setIconTextGap(0);
+        p2Card4.setMaximumSize(new Dimension(100, 160));
+        p2Card4.setMinimumSize(new Dimension(100, 160));
+        p2Card4.setPreferredSize(new Dimension(100, 160));
+        p2Card4.setText("");
+        p2Card4.setVisible(true);
+        gbc = new GridBagConstraints();
+        gbc.gridx = 6;
+        gbc.gridy = 5;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(10, 5, 10, 5);
+        jPanel.add(p2Card4, gbc);
     }
 
     /**

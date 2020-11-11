@@ -154,6 +154,7 @@ public class WinnerScreen {
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.ipadx = 250;
         gbc.insets = new Insets(25, 25, 25, 25);
         victoryPanel.add(playAgainButton, gbc);
         quitGameButton = new JButton();
@@ -162,6 +163,7 @@ public class WinnerScreen {
         gbc.gridx = 1;
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.ipadx = 250;
         gbc.insets = new Insets(25, 25, 25, 25);
         victoryPanel.add(quitGameButton, gbc);
     }

@@ -143,6 +143,7 @@ public class LoserScreen {
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.ipadx = 250;
         gbc.insets = new Insets(25, 25, 25, 25);
         defeatPanel.add(playAgainButton, gbc);
         quitGameButton = new JButton();
@@ -151,6 +152,7 @@ public class LoserScreen {
         gbc.gridx = 1;
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.ipadx = 250;
         gbc.insets = new Insets(25, 25, 25, 25);
         defeatPanel.add(quitGameButton, gbc);
     }

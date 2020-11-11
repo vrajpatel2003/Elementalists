@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Elementalists">
   <grid id="27dc6" binding="jPanel" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="588" y="714" width="1130" height="673"/>
+      <xy x="132" y="47" width="1422" height="810"/>
     </constraints>
     <properties>
       <background color="-4149"/>
@@ -151,66 +151,6 @@
           <visible value="true"/>
         </properties>
       </component>
-      <component id="a528f" class="javax.swing.JButton" binding="p2Card2">
-        <constraints>
-          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <alignmentY value="0.0"/>
-          <autoscrolls value="false"/>
-          <background color="-16777216"/>
-          <borderPainted value="false"/>
-          <foreground color="-16777216"/>
-          <icon value="img/cards/cardback.png"/>
-          <iconTextGap value="0"/>
-          <maximumSize width="100" height="160"/>
-          <minimumSize width="100" height="160"/>
-          <preferredSize width="100" height="160"/>
-          <text value=""/>
-          <visible value="true"/>
-        </properties>
-      </component>
-      <component id="bf525" class="javax.swing.JButton" binding="p2Card3">
-        <constraints>
-          <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <alignmentY value="0.0"/>
-          <autoscrolls value="false"/>
-          <background color="-16777216"/>
-          <borderPainted value="false"/>
-          <foreground color="-16777216"/>
-          <icon value="img/cards/cardback.png"/>
-          <iconTextGap value="0"/>
-          <maximumSize width="100" height="160"/>
-          <minimumSize width="100" height="160"/>
-          <preferredSize width="100" height="160"/>
-          <text value=""/>
-          <visible value="true"/>
-        </properties>
-      </component>
-      <component id="b0552" class="javax.swing.JButton" binding="p2Card4">
-        <constraints>
-          <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <alignmentY value="0.0"/>
-          <autoscrolls value="false"/>
-          <background color="-16777216"/>
-          <borderPainted value="false"/>
-          <foreground color="-16777216"/>
-          <icon value="img/cards/cardback.png"/>
-          <iconTextGap value="0"/>
-          <maximumSize width="100" height="160"/>
-          <minimumSize width="100" height="160"/>
-          <preferredSize width="100" height="160"/>
-          <text value=""/>
-          <visible value="true"/>
-        </properties>
-      </component>
       <component id="26f49" class="javax.swing.JButton" binding="p2Card5">
         <constraints>
           <grid row="5" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -275,7 +215,7 @@
         <properties>
           <font name="Arial" size="20"/>
           <foreground color="-16777216"/>
-          <text value="Actions Performed"/>
+          <text value="Please Fullscreen for Optimal Experiene"/>
         </properties>
       </component>
       <component id="d9e14" class="javax.swing.JLabel" binding="player1Icon">
@@ -522,6 +462,66 @@
           <minimumSize width="0" height="0"/>
           <preferredSize width="30" height="30"/>
           <text value=""/>
+        </properties>
+      </component>
+      <component id="c9058" class="javax.swing.JButton" binding="p2Card3">
+        <constraints>
+          <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <alignmentY value="0.0"/>
+          <autoscrolls value="false"/>
+          <background color="-16777216"/>
+          <borderPainted value="false"/>
+          <foreground color="-16777216"/>
+          <icon value="img/cards/cardback.png"/>
+          <iconTextGap value="0"/>
+          <maximumSize width="100" height="160"/>
+          <minimumSize width="100" height="160"/>
+          <preferredSize width="100" height="160"/>
+          <text value=""/>
+          <visible value="true"/>
+        </properties>
+      </component>
+      <component id="2128a" class="javax.swing.JButton" binding="p2Card2">
+        <constraints>
+          <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <alignmentY value="0.0"/>
+          <autoscrolls value="false"/>
+          <background color="-16777216"/>
+          <borderPainted value="false"/>
+          <foreground color="-16777216"/>
+          <icon value="img/cards/cardback.png"/>
+          <iconTextGap value="0"/>
+          <maximumSize width="100" height="160"/>
+          <minimumSize width="100" height="160"/>
+          <preferredSize width="100" height="160"/>
+          <text value=""/>
+          <visible value="true"/>
+        </properties>
+      </component>
+      <component id="35ffa" class="javax.swing.JButton" binding="p2Card4">
+        <constraints>
+          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="5" bottom="10" right="5" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <alignmentY value="0.0"/>
+          <autoscrolls value="false"/>
+          <background color="-16777216"/>
+          <borderPainted value="false"/>
+          <foreground color="-16777216"/>
+          <icon value="img/cards/cardback.png"/>
+          <iconTextGap value="0"/>
+          <maximumSize width="100" height="160"/>
+          <minimumSize width="100" height="160"/>
+          <preferredSize width="100" height="160"/>
+          <text value=""/>
+          <visible value="true"/>
         </properties>
       </component>
     </children>
