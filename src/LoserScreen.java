@@ -22,7 +22,7 @@ public class LoserScreen {
             @Override
             public void actionPerformed(ActionEvent e) {
                 StartMenu.frame.setContentPane(new Elementalists().getJPanel());
-                fullScreen(frame);
+                fullScreen(StartMenu.frame);
                 StartMenu.frame.setLocationRelativeTo(null);
             }
         });
