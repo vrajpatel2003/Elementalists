@@ -61,8 +61,8 @@ public class Elementalists {
         @Override
         public void actionPerformed(ActionEvent e) {
             canClick = true;
-            player1Icon.setIcon(new ImageIcon(attack1 + "/blueIdle.png"));
-            player2Icon.setIcon(new ImageIcon(attack2 + "/redIdle.png"));
+            player1Icon.setIcon(new ImageIcon(attack1 + "/blueIdle.gif"));
+            player2Icon.setIcon(new ImageIcon(attack2 + "/redIdle.gif"));
             p2Card1.setIcon(new ImageIcon("./src/img/cards/cardback.png"));
             p2Card2.setIcon(new ImageIcon("./src/img/cards/cardback.png"));
             p2Card3.setIcon(new ImageIcon("./src/img/cards/cardback.png"));
@@ -235,10 +235,10 @@ public class Elementalists {
 
     public void compareCards(int player1int) {
 
-        ImageIcon blueAttack = new ImageIcon(attack1 + "blueAttack.png");
-        ImageIcon redDamage = new ImageIcon(attack2 + "redDamage.png");
-        ImageIcon blueDamage = new ImageIcon(attack1 + "blueDamage.png");
-        ImageIcon redAttack = new ImageIcon(attack2 + "redAttack.png");
+        ImageIcon blueAttack = new ImageIcon(attack1 + "blueAttack.gif");
+        ImageIcon redDamage = new ImageIcon(attack2 + "redDamage.gif");
+        ImageIcon blueDamage = new ImageIcon(attack1 + "blueDamage.gif");
+        ImageIcon redAttack = new ImageIcon(attack2 + "redAttack.gif");
         ImageIcon cardBack = new ImageIcon("./src/img/cards/cardback.png");
 
         int player2int = player2.get(0);
@@ -664,7 +664,7 @@ public class Elementalists {
         gbc.insets = new Insets(5, 0, 0, 0);
         jPanel.add(p2Ice1, gbc);
         player2Icon = new JLabel();
-        player2Icon.setIcon(new ImageIcon(getClass().getResource("/img/player2/redIdle.png")));
+        player2Icon.setIcon(new ImageIcon(getClass().getResource("/img/player2/redIdle.gif")));
         player2Icon.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 5;
@@ -684,7 +684,7 @@ public class Elementalists {
         gbc.gridheight = 3;
         jPanel.add(action, gbc);
         player1Icon = new JLabel();
-        player1Icon.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueIdle.png")));
+        player1Icon.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueIdle.gif")));
         player1Icon.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;

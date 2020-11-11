@@ -114,7 +114,7 @@ public class LoserScreen {
         gbc.insets = new Insets(25, 25, 25, 25);
         defeatPanel.add(label1, gbc);
         final JLabel label2 = new JLabel();
-        label2.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueDefeat.png")));
+        label2.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueDefeat.gif")));
         label2.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -122,7 +122,7 @@ public class LoserScreen {
         gbc.insets = new Insets(25, 25, 25, 25);
         defeatPanel.add(label2, gbc);
         final JLabel label3 = new JLabel();
-        label3.setIcon(new ImageIcon(getClass().getResource("/img/player2/redVictory.png")));
+        label3.setIcon(new ImageIcon(getClass().getResource("/img/player2/redVictory.gif")));
         label3.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;

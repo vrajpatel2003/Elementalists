@@ -203,7 +203,7 @@
           <gridbag top="30" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <icon value="img/player2/redIdle.png"/>
+          <icon value="img/player2/redIdle.gif"/>
           <text value=""/>
         </properties>
       </component>
@@ -224,7 +224,7 @@
           <gridbag top="30" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <icon value="img/player1/blueIdle.png"/>
+          <icon value="img/player1/blueIdle.gif"/>
           <text value=""/>
         </properties>
       </component>
