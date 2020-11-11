@@ -36,6 +36,10 @@ public class WinnerScreen {
         });
     }
 
+    public JPanel getJPanel() {
+        return victoryPanel;
+    }
+
     public static void main(String[] args) {
         frame.setContentPane(new WinnerScreen().victoryPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

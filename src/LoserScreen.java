@@ -37,6 +37,10 @@ public class LoserScreen {
         });
     }
 
+    public JPanel getJPanel() {
+        return defeatPanel;
+    }
+
     public static void main(String[] args) {
         frame.setContentPane(new LoserScreen().defeatPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -23,7 +23,6 @@ public class StartMenu {
                 game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 game.pack();
                 game.setVisible(true);
-
             }
         });
     }

@@ -39,6 +39,7 @@ public class Elementalists {
     private JLabel p1Ice3;
     private JLabel p1Ice1;
     private JLabel action;
+    static JFrame frame = new JFrame("MyForm");
 
     //REMOVE "/src" FROM ALL 3 PATHS BEFORE SUBMITTING
     String firePath = "./src/img/cards/Fire/";
@@ -343,8 +344,41 @@ public class Elementalists {
         player2.remove(0);
     }
 
-    public void checkWinner() {
+    Timer toWinnerScreen = new Timer(2000, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            winGame();
+            toWinnerScreen.stop();
+        }
+    });
 
+    public static void winGame() {
+        JFrame game = new JFrame("MyForm");
+        game.setContentPane(new WinnerScreen().getJPanel());
+        game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        game.pack();
+        game.setVisible(true);
+        frame.dispose();
+    }
+
+    Timer toLoserScreen = new Timer(2000, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            loseGame();
+            toLoserScreen.stop();
+        }
+    });
+
+    public static void loseGame() {
+        JFrame game = new JFrame("MyForm");
+        game.setContentPane(new LoserScreen().getJPanel());
+        game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        game.pack();
+        game.setVisible(true);
+        frame.dispose();
+    }
+
+    public void checkWinner() {
         if (p1FireWins == 3) {
             p1Fire1.setEnabled(true);
             p1Fire2.setEnabled(true);
@@ -375,7 +409,6 @@ public class Elementalists {
         } else if (p1IceWins == 1) {
             p1Ice1.setEnabled(true);
         }
-
         if (p2FireWins == 3) {
             p2Fire1.setEnabled(true);
             p2Fire2.setEnabled(true);
@@ -406,11 +439,18 @@ public class Elementalists {
         } else if (p2IceWins == 1) {
             p2Ice1.setEnabled(true);
         }
+
         if (p1FireWins == 3 || p1WaterWins == 3 || p1IceWins == 3 || (p1FireWins >= 1 && p1WaterWins >= 1 && p1IceWins >= 1)) {
-            System.out.println("p1 wins");
+            String newText = action.getText();
+            newText += " You won the game!!! :)";
+            action.setText(newText);
+            toWinnerScreen.start();
         }
         if (p2FireWins == 3 || p2WaterWins == 3 || p2IceWins == 3 || (p2FireWins == 1 && p2WaterWins == 1 && p2IceWins == 1)) {
-            System.out.println("p2 wins");
+            String newText = action.getText();
+            newText += " You lost the game... :(";
+            action.setText(newText);
+            toLoserScreen.start();
         }
     }
 
@@ -433,7 +473,6 @@ public class Elementalists {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("MyForm");
         frame.setContentPane(new Elementalists().jPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
