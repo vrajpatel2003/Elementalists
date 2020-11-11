@@ -676,7 +676,7 @@ public class Elementalists {
         Font actionFont = this.$$$getFont$$$("Arial", -1, 20, action.getFont());
         if (actionFont != null) action.setFont(actionFont);
         action.setForeground(new Color(-16777216));
-        action.setText("Please Fullscreen for Optimal Experience");
+        action.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
         gbc.gridy = 1;

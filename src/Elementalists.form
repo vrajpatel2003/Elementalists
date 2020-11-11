@@ -215,7 +215,7 @@
         <properties>
           <font name="Arial" size="20"/>
           <foreground color="-16777216"/>
-          <text value="Please Fullscreen for Optimal Experience"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="d9e14" class="javax.swing.JLabel" binding="player1Icon">

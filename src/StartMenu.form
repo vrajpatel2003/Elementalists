@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="StartMenu">
   <grid id="27dc6" binding="startMenu" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="20" y="20" width="533" height="383"/>
+      <xy x="20" y="20" width="590" height="520"/>
     </constraints>
     <properties>
       <background color="-4149"/>
@@ -12,8 +12,8 @@
     <children>
       <component id="be1ab" class="javax.swing.JButton" binding="startGameButton" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag top="25" left="25" bottom="25" right="25" weightx="0.0" weighty="0.0"/>
+          <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="50" left="50" bottom="25" right="50" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <font name="Papyrus" size="16"/>
@@ -22,7 +22,7 @@
       </component>
       <component id="86eb" class="javax.swing.JLabel" binding="lblRank">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="11" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag top="25" left="25" bottom="25" right="25" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -32,13 +32,131 @@
       </component>
       <component id="d2e43" class="javax.swing.JLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag top="25" left="25" bottom="25" right="25" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <font name="Papyrus" size="72"/>
           <foreground color="-7921800"/>
           <text value="Elementalists"/>
+        </properties>
+      </component>
+      <component id="41095" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="0" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="2"/>
+          <text value="1.    The three elements. Fire, water and ice."/>
+        </properties>
+      </component>
+      <component id="21f9f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="0" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="2"/>
+          <text value="2.    Wizards have transformed each element into spells."/>
+        </properties>
+      </component>
+      <component id="7d6f8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="0" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="2"/>
+          <text value="3.    Fire beats ice. Ice beats water. Water beats fire."/>
+        </properties>
+      </component>
+      <component id="28eb5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="0" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="2"/>
+          <text value="4.    Each type has 10 different spells, with a higher number being stronger."/>
+        </properties>
+      </component>
+      <component id="a7976" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="0" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="2"/>
+          <text value="5.    You are given 30 spells, but you can only choose from five at a time."/>
+        </properties>
+      </component>
+      <component id="29eb2" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="0" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="2"/>
+          <text value="6.    If both wizards cast the same element, the stronger spell wins."/>
+        </properties>
+      </component>
+      <component id="c4570" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="0" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="2"/>
+          <text value="7.    When two of the same spells are casted, they will be cancelled out."/>
+        </properties>
+      </component>
+      <component id="1a482" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="0" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <foreground color="-16777216"/>
+          <horizontalAlignment value="2"/>
+          <text value="8.    Try to beat the red wizard!"/>
+        </properties>
+      </component>
+      <component id="6ffd8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="125" bottom="25" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <icon value="img/icons/FireIcon.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="9fa8b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="25" right="50" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <icon value="img/icons/WaterIcon.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="88555" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="50" bottom="25" right="125" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <icon value="img/icons/IceIcon.png"/>
+          <text value=""/>
         </properties>
       </component>
     </children>
