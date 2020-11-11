@@ -18,10 +18,14 @@ public class StartMenu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setContentPane(new Elementalists().getJPanel());
-                frame.pack();
+                fullScreen(frame);
                 frame.setLocationRelativeTo(null);
             }
         });
+    }
+    private static void fullScreen(JFrame aFrame) { // src = https://alvinalexander.com/blog/post/jfc-swing/how-set-jframe-size-fill-entire-screen-maximize/
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        aFrame.setSize(screenSize.width, screenSize.height);
     }
 
     public static void main(String[] args) {

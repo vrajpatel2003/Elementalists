@@ -430,7 +430,7 @@ public class Elementalists {
             action.setText("You won the game!!! :)");
             toWinnerScreen.start();
         }
-        if (p2FireWins == 3 || p2WaterWins == 3 || p2IceWins == 3 || (p2FireWins == 1 && p2WaterWins == 1 && p2IceWins == 1)) {
+        if (p2FireWins == 3 || p2WaterWins == 3 || p2IceWins == 3 || (p2FireWins >= 1 && p2WaterWins >= 1 && p2IceWins >= 1)) {
             action.setText("You lost the game... :(");
             toLoserScreen.start();
         }
@@ -454,12 +454,19 @@ public class Elementalists {
         return jPanel;
     }
 
+    private static void fullScreen(JFrame aFrame) { // src = https://alvinalexander.com/blog/post/jfc-swing/how-set-jframe-size-fill-entire-screen-maximize/
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        aFrame.setSize(screenSize.width, screenSize.height);
+    }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyGameForm");
         frame.setContentPane(new Elementalists().jPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
+        fullScreen(frame);
+        //frame.pack();
         frame.setLocationRelativeTo(null);
+
         frame.setVisible(true);
     }
 

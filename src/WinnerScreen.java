@@ -22,7 +22,7 @@ public class WinnerScreen {
             @Override
             public void actionPerformed(ActionEvent e) {
                 StartMenu.frame.setContentPane(new Elementalists().getJPanel());
-                StartMenu.frame.pack();
+                fullScreen(StartMenu.frame);
                 StartMenu.frame.setLocationRelativeTo(null);
             }
         });
@@ -36,6 +36,11 @@ public class WinnerScreen {
 
     public JPanel getJPanel() {
         return victoryPanel;
+    }
+
+    private static void fullScreen(JFrame aFrame) { // src = https://alvinalexander.com/blog/post/jfc-swing/how-set-jframe-size-fill-entire-screen-maximize/
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        aFrame.setSize(screenSize.width, screenSize.height);
     }
 
     public static void main(String[] args) {
