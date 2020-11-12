@@ -1,9 +1,12 @@
+package elementalists;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
 import java.io.*;
+import elementalists.*;
 
 public class StartMenu {
     private JButton startGameButton;
