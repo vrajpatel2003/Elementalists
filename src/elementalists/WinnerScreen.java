@@ -127,7 +127,7 @@ public class WinnerScreen {
         gbc.insets = new Insets(25, 25, 25, 25);
         victoryPanel.add(label1, gbc);
         final JLabel label2 = new JLabel();
-        label2.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueVictory.gif")));
+        label2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/player1/blueVictory.gif")));
         label2.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -135,7 +135,7 @@ public class WinnerScreen {
         gbc.insets = new Insets(25, 25, 25, 25);
         victoryPanel.add(label2, gbc);
         final JLabel label3 = new JLabel();
-        label3.setIcon(new ImageIcon(getClass().getResource("/img/player2/redDefeat.gif")));
+        label3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/player2/redDefeat.gif")));
         label3.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;

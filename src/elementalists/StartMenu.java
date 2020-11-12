@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
 import java.io.*;
-import elementalists.*;
 
 public class StartMenu {
     private JButton startGameButton;
@@ -206,7 +205,7 @@ public class StartMenu {
         gbc.insets = new Insets(0, 50, 0, 50);
         startMenu.add(label9, gbc);
         final JLabel label10 = new JLabel();
-        label10.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
+        label10.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/FireIcon.png")));
         label10.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -215,7 +214,7 @@ public class StartMenu {
         gbc.insets = new Insets(0, 125, 25, 50);
         startMenu.add(label10, gbc);
         final JLabel label11 = new JLabel();
-        label11.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
+        label11.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/WaterIcon.png")));
         label11.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
@@ -224,7 +223,7 @@ public class StartMenu {
         gbc.insets = new Insets(0, 50, 25, 50);
         startMenu.add(label11, gbc);
         final JLabel label12 = new JLabel();
-        label12.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
+        label12.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/IceIcon.png")));
         label12.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 2;

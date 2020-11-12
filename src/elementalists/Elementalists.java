@@ -46,11 +46,11 @@ public class Elementalists {
 //    static JFrame frame = new JFrame("Elementalists");
 
     //REMOVE "/src" FROM ALL 3 PATHS BEFORE SUBMITTING
-    String firePath = "./src/img/cards/Fire/";
-    String waterPath = "./src/img/cards/Water/";
-    String icePath = "./src/img/cards/Ice/";
-    String attack1 = "./src/img/player1/";
-    String attack2 = "./src/img/player2/";
+    String firePath = "./src/elementalists.img/cards/Fire/";
+    String waterPath = "./src/elementalists.img/cards/Water/";
+    String icePath = "./src/elementalists.img/cards/Ice/";
+    String attack1 = "./src/elementalists.img/player1/";
+    String attack2 = "./src/elementalists.img/player2/";
     ImageIcon[] imageIcons = new ImageIcon[30];
     ArrayList<Integer> player1;
     ArrayList<Integer> player2;
@@ -67,11 +67,11 @@ public class Elementalists {
             canClick = true;
             player1Icon.setIcon(new ImageIcon(attack1 + "/blueIdle.gif"));
             player2Icon.setIcon(new ImageIcon(attack2 + "/redIdle.gif"));
-            p2Card1.setIcon(new ImageIcon("./src/img/cards/cardback.png"));
-            p2Card2.setIcon(new ImageIcon("./src/img/cards/cardback.png"));
-            p2Card3.setIcon(new ImageIcon("./src/img/cards/cardback.png"));
-            p2Card4.setIcon(new ImageIcon("./src/img/cards/cardback.png"));
-            p2Card5.setIcon(new ImageIcon("./src/img/cards/cardback.png"));
+            p2Card1.setIcon(new ImageIcon("./src/elementalists.img/cards/cardback.png"));
+            p2Card2.setIcon(new ImageIcon("./src/elementalists.img/cards/cardback.png"));
+            p2Card3.setIcon(new ImageIcon("./src/elementalists.img/cards/cardback.png"));
+            p2Card4.setIcon(new ImageIcon("./src/elementalists.img/cards/cardback.png"));
+            p2Card5.setIcon(new ImageIcon("./src/elementalists.img/cards/cardback.png"));
             timer.stop();
         }
     });
@@ -90,31 +90,31 @@ public class Elementalists {
                 p1Card2.setIcon(imageIcons[player1.get(1)]);
                 p1Card3.setIcon(imageIcons[player1.get(2)]);
                 p1Card4.setIcon(imageIcons[player1.get(3)]);
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
             } else if (a == 4) {
                 p1Card1.setIcon(imageIcons[player1.get(0)]);
                 p1Card2.setIcon(imageIcons[player1.get(1)]);
                 p1Card3.setIcon(imageIcons[player1.get(2)]);
-                p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+                p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
             } else if (a == 3) {
                 p1Card1.setIcon(imageIcons[player1.get(0)]);
                 p1Card2.setIcon(imageIcons[player1.get(1)]);
-                p1Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+                p1Card3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
             } else if (a == 2) {
                 p1Card1.setIcon(imageIcons[player1.get(0)]);
-                p1Card2.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+                p1Card2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
             } else if (a == 1) {
-                p1Card1.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card2.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+                p1Card1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
             }
             p1Card1.setEnabled(true);
             p1Card2.setEnabled(true);
@@ -243,7 +243,7 @@ public class Elementalists {
         ImageIcon redDamage = new ImageIcon(attack2 + "redDamage.gif");
         ImageIcon blueDamage = new ImageIcon(attack1 + "blueDamage.gif");
         ImageIcon redAttack = new ImageIcon(attack2 + "redAttack.gif");
-        ImageIcon cardBack = new ImageIcon("./src/img/cards/cardback.png");
+        ImageIcon cardBack = new ImageIcon("./src/elementalists.img/cards/cardback.png");
 
         int player2int = player2.get(0);
         int randomCard = ThreadLocalRandom.current().nextInt(1, 5 + 1);
@@ -497,7 +497,7 @@ public class Elementalists {
         p2Fire1 = new JLabel();
         p2Fire1.setAlignmentY(0.0f);
         p2Fire1.setEnabled(false);
-        p2Fire1.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
+        p2Fire1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/FireIcon.png")));
         p2Fire1.setMaximumSize(new Dimension(30, 30));
         p2Fire1.setMinimumSize(new Dimension(0, 0));
         p2Fire1.setPreferredSize(new Dimension(30, 30));
@@ -512,7 +512,7 @@ public class Elementalists {
         p2Fire2 = new JLabel();
         p2Fire2.setAlignmentY(0.0f);
         p2Fire2.setEnabled(false);
-        p2Fire2.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
+        p2Fire2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/FireIcon.png")));
         p2Fire2.setMaximumSize(new Dimension(30, 30));
         p2Fire2.setMinimumSize(new Dimension(0, 0));
         p2Fire2.setPreferredSize(new Dimension(30, 30));
@@ -525,7 +525,7 @@ public class Elementalists {
         p2Fire3 = new JLabel();
         p2Fire3.setAlignmentY(0.0f);
         p2Fire3.setEnabled(false);
-        p2Fire3.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
+        p2Fire3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/FireIcon.png")));
         p2Fire3.setMaximumSize(new Dimension(30, 30));
         p2Fire3.setMinimumSize(new Dimension(0, 0));
         p2Fire3.setPreferredSize(new Dimension(30, 30));
@@ -539,7 +539,7 @@ public class Elementalists {
         p2Water1 = new JLabel();
         p2Water1.setAlignmentY(0.0f);
         p2Water1.setEnabled(false);
-        p2Water1.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
+        p2Water1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/WaterIcon.png")));
         p2Water1.setMaximumSize(new Dimension(30, 30));
         p2Water1.setMinimumSize(new Dimension(0, 0));
         p2Water1.setPreferredSize(new Dimension(30, 30));
@@ -553,7 +553,7 @@ public class Elementalists {
         p2Water2 = new JLabel();
         p2Water2.setAlignmentY(0.0f);
         p2Water2.setEnabled(false);
-        p2Water2.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
+        p2Water2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/WaterIcon.png")));
         p2Water2.setMaximumSize(new Dimension(30, 30));
         p2Water2.setMinimumSize(new Dimension(0, 0));
         p2Water2.setPreferredSize(new Dimension(30, 30));
@@ -566,7 +566,7 @@ public class Elementalists {
         p2Water3 = new JLabel();
         p2Water3.setAlignmentY(0.0f);
         p2Water3.setEnabled(false);
-        p2Water3.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
+        p2Water3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/WaterIcon.png")));
         p2Water3.setMaximumSize(new Dimension(30, 30));
         p2Water3.setMinimumSize(new Dimension(0, 0));
         p2Water3.setPreferredSize(new Dimension(30, 30));
@@ -580,7 +580,7 @@ public class Elementalists {
         p2Ice2 = new JLabel();
         p2Ice2.setAlignmentY(0.0f);
         p2Ice2.setEnabled(false);
-        p2Ice2.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
+        p2Ice2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/IceIcon.png")));
         p2Ice2.setMaximumSize(new Dimension(30, 30));
         p2Ice2.setMinimumSize(new Dimension(0, 0));
         p2Ice2.setPreferredSize(new Dimension(30, 30));
@@ -593,7 +593,7 @@ public class Elementalists {
         p2Ice3 = new JLabel();
         p2Ice3.setAlignmentY(0.0f);
         p2Ice3.setEnabled(false);
-        p2Ice3.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
+        p2Ice3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/IceIcon.png")));
         p2Ice3.setMaximumSize(new Dimension(30, 30));
         p2Ice3.setMinimumSize(new Dimension(0, 0));
         p2Ice3.setPreferredSize(new Dimension(30, 30));
@@ -610,7 +610,7 @@ public class Elementalists {
         p2Card1.setBackground(new Color(-16777216));
         p2Card1.setBorderPainted(false);
         p2Card1.setForeground(new Color(-16777216));
-        p2Card1.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p2Card1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p2Card1.setIconTextGap(0);
         p2Card1.setMaximumSize(new Dimension(100, 160));
         p2Card1.setMinimumSize(new Dimension(100, 160));
@@ -629,7 +629,7 @@ public class Elementalists {
         p2Card5.setBackground(new Color(-16777216));
         p2Card5.setBorderPainted(false);
         p2Card5.setForeground(new Color(-16777216));
-        p2Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p2Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p2Card5.setIconTextGap(0);
         p2Card5.setMaximumSize(new Dimension(100, 160));
         p2Card5.setMinimumSize(new Dimension(100, 160));
@@ -656,7 +656,7 @@ public class Elementalists {
         p2Ice1 = new JLabel();
         p2Ice1.setAlignmentY(0.0f);
         p2Ice1.setEnabled(false);
-        p2Ice1.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
+        p2Ice1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/IceIcon.png")));
         p2Ice1.setMaximumSize(new Dimension(30, 30));
         p2Ice1.setMinimumSize(new Dimension(0, 0));
         p2Ice1.setPreferredSize(new Dimension(30, 30));
@@ -668,7 +668,7 @@ public class Elementalists {
         gbc.insets = new Insets(5, 0, 0, 0);
         jPanel.add(p2Ice1, gbc);
         player2Icon = new JLabel();
-        player2Icon.setIcon(new ImageIcon(getClass().getResource("/img/player2/redIdle.gif")));
+        player2Icon.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/player2/redIdle.gif")));
         player2Icon.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 5;
@@ -688,7 +688,7 @@ public class Elementalists {
         gbc.gridheight = 3;
         jPanel.add(action, gbc);
         player1Icon = new JLabel();
-        player1Icon.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueIdle.gif")));
+        player1Icon.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/player1/blueIdle.gif")));
         player1Icon.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -702,7 +702,7 @@ public class Elementalists {
         p1Card1.setBackground(new Color(-16777216));
         p1Card1.setBorderPainted(false);
         p1Card1.setForeground(new Color(-16777216));
-        p1Card1.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p1Card1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p1Card1.setIconTextGap(0);
         p1Card1.setMaximumSize(new Dimension(100, 160));
         p1Card1.setMinimumSize(new Dimension(100, 160));
@@ -721,7 +721,7 @@ public class Elementalists {
         p1Card2.setBackground(new Color(-16777216));
         p1Card2.setBorderPainted(false);
         p1Card2.setForeground(new Color(-16777216));
-        p1Card2.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p1Card2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p1Card2.setIconTextGap(0);
         p1Card2.setMaximumSize(new Dimension(100, 160));
         p1Card2.setMinimumSize(new Dimension(100, 160));
@@ -740,7 +740,7 @@ public class Elementalists {
         p1Card3.setBackground(new Color(-16777216));
         p1Card3.setBorderPainted(false);
         p1Card3.setForeground(new Color(-16777216));
-        p1Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p1Card3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p1Card3.setIconTextGap(0);
         p1Card3.setMaximumSize(new Dimension(100, 160));
         p1Card3.setMinimumSize(new Dimension(100, 160));
@@ -759,7 +759,7 @@ public class Elementalists {
         p1Card4.setBackground(new Color(-16777216));
         p1Card4.setBorderPainted(false);
         p1Card4.setForeground(new Color(-16777216));
-        p1Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p1Card4.setIconTextGap(0);
         p1Card4.setMaximumSize(new Dimension(100, 160));
         p1Card4.setMinimumSize(new Dimension(100, 160));
@@ -778,7 +778,7 @@ public class Elementalists {
         p1Card5.setBackground(new Color(-16777216));
         p1Card5.setBorderPainted(false);
         p1Card5.setForeground(new Color(-16777216));
-        p1Card5.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p1Card5.setIconTextGap(0);
         p1Card5.setMaximumSize(new Dimension(100, 160));
         p1Card5.setMinimumSize(new Dimension(100, 160));
@@ -795,7 +795,7 @@ public class Elementalists {
         p1Fire1.setAlignmentY(0.0f);
         p1Fire1.setDoubleBuffered(true);
         p1Fire1.setEnabled(false);
-        p1Fire1.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
+        p1Fire1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/FireIcon.png")));
         p1Fire1.setMaximumSize(new Dimension(30, 30));
         p1Fire1.setMinimumSize(new Dimension(0, 0));
         p1Fire1.setPreferredSize(new Dimension(30, 30));
@@ -809,7 +809,7 @@ public class Elementalists {
         p1Fire2 = new JLabel();
         p1Fire2.setAlignmentY(0.0f);
         p1Fire2.setEnabled(false);
-        p1Fire2.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
+        p1Fire2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/FireIcon.png")));
         p1Fire2.setMaximumSize(new Dimension(30, 30));
         p1Fire2.setMinimumSize(new Dimension(0, 0));
         p1Fire2.setPreferredSize(new Dimension(30, 30));
@@ -822,7 +822,7 @@ public class Elementalists {
         p1Fire3 = new JLabel();
         p1Fire3.setAlignmentY(0.0f);
         p1Fire3.setEnabled(false);
-        p1Fire3.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
+        p1Fire3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/FireIcon.png")));
         p1Fire3.setMaximumSize(new Dimension(30, 30));
         p1Fire3.setMinimumSize(new Dimension(0, 0));
         p1Fire3.setPreferredSize(new Dimension(30, 30));
@@ -836,7 +836,7 @@ public class Elementalists {
         p1Water1 = new JLabel();
         p1Water1.setAlignmentY(0.0f);
         p1Water1.setEnabled(false);
-        p1Water1.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
+        p1Water1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/WaterIcon.png")));
         p1Water1.setMaximumSize(new Dimension(30, 30));
         p1Water1.setMinimumSize(new Dimension(0, 0));
         p1Water1.setPreferredSize(new Dimension(30, 30));
@@ -850,7 +850,7 @@ public class Elementalists {
         p1Water2 = new JLabel();
         p1Water2.setAlignmentY(0.0f);
         p1Water2.setEnabled(false);
-        p1Water2.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
+        p1Water2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/WaterIcon.png")));
         p1Water2.setMaximumSize(new Dimension(30, 30));
         p1Water2.setMinimumSize(new Dimension(0, 0));
         p1Water2.setPreferredSize(new Dimension(30, 30));
@@ -863,7 +863,7 @@ public class Elementalists {
         p1Water3 = new JLabel();
         p1Water3.setAlignmentY(0.0f);
         p1Water3.setEnabled(false);
-        p1Water3.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
+        p1Water3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/WaterIcon.png")));
         p1Water3.setMaximumSize(new Dimension(30, 30));
         p1Water3.setMinimumSize(new Dimension(0, 0));
         p1Water3.setPreferredSize(new Dimension(30, 30));
@@ -877,7 +877,7 @@ public class Elementalists {
         p1Ice2 = new JLabel();
         p1Ice2.setAlignmentY(0.0f);
         p1Ice2.setEnabled(false);
-        p1Ice2.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
+        p1Ice2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/IceIcon.png")));
         p1Ice2.setMaximumSize(new Dimension(30, 30));
         p1Ice2.setMinimumSize(new Dimension(0, 0));
         p1Ice2.setPreferredSize(new Dimension(30, 30));
@@ -890,7 +890,7 @@ public class Elementalists {
         p1Ice3 = new JLabel();
         p1Ice3.setAlignmentY(0.0f);
         p1Ice3.setEnabled(false);
-        p1Ice3.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
+        p1Ice3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/IceIcon.png")));
         p1Ice3.setMaximumSize(new Dimension(30, 30));
         p1Ice3.setMinimumSize(new Dimension(0, 0));
         p1Ice3.setPreferredSize(new Dimension(30, 30));
@@ -904,7 +904,7 @@ public class Elementalists {
         p1Ice1 = new JLabel();
         p1Ice1.setAlignmentY(0.0f);
         p1Ice1.setEnabled(false);
-        p1Ice1.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
+        p1Ice1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/IceIcon.png")));
         p1Ice1.setMaximumSize(new Dimension(30, 30));
         p1Ice1.setMinimumSize(new Dimension(0, 0));
         p1Ice1.setPreferredSize(new Dimension(30, 30));
@@ -921,7 +921,7 @@ public class Elementalists {
         p2Card3.setBackground(new Color(-16777216));
         p2Card3.setBorderPainted(false);
         p2Card3.setForeground(new Color(-16777216));
-        p2Card3.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p2Card3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p2Card3.setIconTextGap(0);
         p2Card3.setMaximumSize(new Dimension(100, 160));
         p2Card3.setMinimumSize(new Dimension(100, 160));
@@ -940,7 +940,7 @@ public class Elementalists {
         p2Card2.setBackground(new Color(-16777216));
         p2Card2.setBorderPainted(false);
         p2Card2.setForeground(new Color(-16777216));
-        p2Card2.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p2Card2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p2Card2.setIconTextGap(0);
         p2Card2.setMaximumSize(new Dimension(100, 160));
         p2Card2.setMinimumSize(new Dimension(100, 160));
@@ -959,7 +959,7 @@ public class Elementalists {
         p2Card4.setBackground(new Color(-16777216));
         p2Card4.setBorderPainted(false);
         p2Card4.setForeground(new Color(-16777216));
-        p2Card4.setIcon(new ImageIcon(getClass().getResource("/img/cards/cardback.png")));
+        p2Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
         p2Card4.setIconTextGap(0);
         p2Card4.setMaximumSize(new Dimension(100, 160));
         p2Card4.setMinimumSize(new Dimension(100, 160));
