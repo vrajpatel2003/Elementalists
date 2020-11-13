@@ -1,1 +1,9 @@
+Apprentice
+Initiate
+Disciple
+Adept
+Master
+Oracle
+Mage
+Archmage
 Grandmaster
