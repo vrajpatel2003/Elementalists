@@ -61,7 +61,7 @@ public class LoserScreen {
         ArrayList<String> fileLines = new ArrayList<>();
 
         try {
-            br = new BufferedReader(new FileReader("src/currentRank.txt"));
+            br = new BufferedReader(new FileReader("./currentRank.txt"));
 
             String newLine;
 
@@ -88,6 +88,7 @@ public class LoserScreen {
 
     /**
      * Gets the JPanel of the LoserScreen class. Used for switching between windows.
+     *
      * @return loser screen JPanel.
      */
     public JPanel getJPanel() {
@@ -103,20 +104,6 @@ public class LoserScreen {
     private static void fullScreen(JFrame aFrame) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         aFrame.setSize(screenSize.width, screenSize.height);
-    }
-
-    /**
-     * Main method for the LoserScreen class. Used to create the GUI with the JPanel of the loser screen.
-     *
-     * @param args Required parameter for main classes.
-     * @deprecated
-     */
-    public static void main(String[] args) {
-        frame.setContentPane(new LoserScreen().defeatPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
     }
 
     {
@@ -150,7 +137,7 @@ public class LoserScreen {
         gbc.insets = new Insets(25, 25, 25, 25);
         defeatPanel.add(label1, gbc);
         final JLabel label2 = new JLabel();
-        label2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/player1/blueDefeat.gif")));
+        label2.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueDefeat.gif")));
         label2.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -158,7 +145,7 @@ public class LoserScreen {
         gbc.insets = new Insets(25, 25, 25, 25);
         defeatPanel.add(label2, gbc);
         final JLabel label3 = new JLabel();
-        label3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/player2/redVictory.gif")));
+        label3.setIcon(new ImageIcon(getClass().getResource("/img/player2/redVictory.gif")));
         label3.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;

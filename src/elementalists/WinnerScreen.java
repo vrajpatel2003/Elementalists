@@ -62,7 +62,7 @@ public class WinnerScreen {
         ArrayList<String> fileLines = new ArrayList<>();
 
         try {
-            br = new BufferedReader(new FileReader("src/currentRank.txt"));
+            br = new BufferedReader(new FileReader("./currentRank.txt"));
 
             String newLine;
 
@@ -75,7 +75,7 @@ public class WinnerScreen {
 
                 lblRank.setText("Current Rank: " + fileLines.get(0));
 
-                FileWriter writer = new FileWriter("src/currentRank.txt");
+                FileWriter writer = new FileWriter("./currentRank.txt");
                 for (int i = 0; i < fileLines.size(); i++) {
                     writer.write(fileLines.get(i) + "\n");
                 }
@@ -101,6 +101,7 @@ public class WinnerScreen {
 
     /**
      * Gets the JPanel of the WinnerScreen class. Used for switching between windows.
+     *
      * @return winner screen JPanel.
      */
     public JPanel getJPanel() {
@@ -116,20 +117,6 @@ public class WinnerScreen {
     private static void fullScreen(JFrame aFrame) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         aFrame.setSize(screenSize.width, screenSize.height);
-    }
-
-    /**
-     * Main method for the WinnerScreen class. Used to create the GUI with the JPanel of the winner screen.
-     *
-     * @param args Required parameter for main classes.
-     * @deprecated
-     */
-    public static void main(String[] args) {
-        frame.setContentPane(new WinnerScreen().victoryPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
     }
 
     {
@@ -163,22 +150,13 @@ public class WinnerScreen {
         gbc.insets = new Insets(25, 25, 25, 25);
         victoryPanel.add(label1, gbc);
         final JLabel label2 = new JLabel();
-        label2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/player1/blueVictory.gif")));
+        label2.setIcon(new ImageIcon(getClass().getResource("/img/player1/blueVictory.gif")));
         label2.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.insets = new Insets(25, 25, 25, 25);
         victoryPanel.add(label2, gbc);
-        final JLabel label3 = new JLabel();
-        label3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/player2/redDefeat.gif")));
-        label3.setText("");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.insets = new Insets(25, 25, 25, 25);
-        victoryPanel.add(label3, gbc);
         rankUpMessage = new JLabel();
         rankUpMessage.setText("You have ranked up!");
         gbc = new GridBagConstraints();
@@ -213,6 +191,15 @@ public class WinnerScreen {
         gbc.ipadx = 250;
         gbc.insets = new Insets(25, 25, 25, 25);
         victoryPanel.add(quitGameButton, gbc);
+        final JLabel label3 = new JLabel();
+        label3.setIcon(new ImageIcon(getClass().getResource("/img/player2/redDefeat.gif")));
+        label3.setText("");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        gbc.anchor = GridBagConstraints.WEST;
+        gbc.insets = new Insets(25, 25, 25, 25);
+        victoryPanel.add(label3, gbc);
     }
 
     /**

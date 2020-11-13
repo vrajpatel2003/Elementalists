@@ -27,7 +27,6 @@ public class StartMenu {
     private JLabel lblRank;
     public static JFrame frame = new JFrame("Elementalists");
 
-
     /**
      * Constructor Class for the Start menu. When ran, the rainCheck method will run, and a listener will be created
      * for the "Start Game" button.
@@ -52,7 +51,7 @@ public class StartMenu {
         ArrayList<String> fileLines = new ArrayList<>();
 
         try {
-            br = new BufferedReader(new FileReader("src/currentRank.txt"));
+            br = new BufferedReader(new FileReader("./currentRank.txt"));
 
             String newLine;
 
@@ -237,7 +236,7 @@ public class StartMenu {
         gbc.insets = new Insets(0, 50, 0, 50);
         startMenu.add(label9, gbc);
         final JLabel label10 = new JLabel();
-        label10.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/FireIcon.png")));
+        label10.setIcon(new ImageIcon(getClass().getResource("/img/icons/FireIcon.png")));
         label10.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -246,7 +245,7 @@ public class StartMenu {
         gbc.insets = new Insets(0, 125, 25, 50);
         startMenu.add(label10, gbc);
         final JLabel label11 = new JLabel();
-        label11.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/WaterIcon.png")));
+        label11.setIcon(new ImageIcon(getClass().getResource("/img/icons/WaterIcon.png")));
         label11.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
@@ -255,7 +254,7 @@ public class StartMenu {
         gbc.insets = new Insets(0, 50, 25, 50);
         startMenu.add(label11, gbc);
         final JLabel label12 = new JLabel();
-        label12.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/icons/IceIcon.png")));
+        label12.setIcon(new ImageIcon(getClass().getResource("/img/icons/IceIcon.png")));
         label12.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
