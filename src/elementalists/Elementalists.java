@@ -1,3 +1,18 @@
+/**
+ * The main game class. It includes the GUI to the main game screen, as well as most of the logic related to the
+ * gameplay.
+ *
+ * https://github.com/vrajpatel2003/Elementalists
+ *
+ * Created by Ayush Vora, Neil Patel, Vicky Patel, and Vraj Patel
+ * For Mr. Keway So (vmso) for the final project (4.3) of ICS4U (Computer Science)
+ *
+ * @author  Ayush Vora, Neil Patel, Vicky Patel, Vraj Patel
+ * @version 1.0
+ * @since   2020-11-12
+ * @filename Elementalists.java
+ */
+
 package elementalists;
 
 import javax.swing.*;
@@ -7,9 +22,6 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.ThreadLocalRandom;
-
-
-
 public class Elementalists {
     private JPanel jPanel;
     private JLabel p2Fire1;
@@ -43,14 +55,12 @@ public class Elementalists {
     private JLabel p1Ice3;
     private JLabel p1Ice1;
     private JLabel action;
-//    static JFrame frame = new JFrame("Elementalists");
-
-    //REMOVE "/src" FROM ALL 3 PATHS BEFORE SUBMITTING
     String firePath = "./src/elementalists.img/cards/Fire/";
     String waterPath = "./src/elementalists.img/cards/Water/";
     String icePath = "./src/elementalists.img/cards/Ice/";
     String attack1 = "./src/elementalists.img/player1/";
     String attack2 = "./src/elementalists.img/player2/";
+    ImageIcon cardback = new ImageIcon("./src/elementalists.img/cards/cardback.png");
     ImageIcon[] imageIcons = new ImageIcon[30];
     ArrayList<Integer> player1;
     ArrayList<Integer> player2;
@@ -61,8 +71,13 @@ public class Elementalists {
     int p2FireWins = 0;
     int p2WaterWins = 0;
     int p2IceWins = 0;
-    Timer timer = new Timer(2000, new ActionListener() {
+    Timer resetRoundTimer = new Timer(2000, new ActionListener() {
         @Override
+        /**
+         * After 2 seconds, this method is resets the player icons to idle and flips the cards back over.
+         *
+         * @param e Looks for the start of timer.
+         */
         public void actionPerformed(ActionEvent e) {
             canClick = true;
             player1Icon.setIcon(new ImageIcon(attack1 + "/blueIdle.gif"));
@@ -72,59 +87,71 @@ public class Elementalists {
             p2Card3.setIcon(new ImageIcon("./src/elementalists.img/cards/cardback.png"));
             p2Card4.setIcon(new ImageIcon("./src/elementalists.img/cards/cardback.png"));
             p2Card5.setIcon(new ImageIcon("./src/elementalists.img/cards/cardback.png"));
-            timer.stop();
+            resetRoundTimer.stop();
         }
     });
-    Timer timer2 = new Timer(2000, new ActionListener() {
+    Timer addCards = new Timer(2000, new ActionListener() {
         @Override
+        /**
+         * After 2 seconds, this method adds the new card drawn by the player into their hand. If there are no more
+         * cards in the player's hand, the card displayed will only be the card back.
+         *
+         * @param e Looks for the start of timer.
+         */
         public void actionPerformed(ActionEvent e) {
             int a = player1.size();
-            if (a > 5) {
-                p1Card1.setIcon(imageIcons[player1.get(0)]);
-                p1Card2.setIcon(imageIcons[player1.get(1)]);
-                p1Card3.setIcon(imageIcons[player1.get(2)]);
-                p1Card4.setIcon(imageIcons[player1.get(3)]);
-                p1Card5.setIcon(imageIcons[player1.get(4)]);
-            } else if (a == 5) {
-                p1Card1.setIcon(imageIcons[player1.get(0)]);
-                p1Card2.setIcon(imageIcons[player1.get(1)]);
-                p1Card3.setIcon(imageIcons[player1.get(2)]);
-                p1Card4.setIcon(imageIcons[player1.get(3)]);
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-            } else if (a == 4) {
-                p1Card1.setIcon(imageIcons[player1.get(0)]);
-                p1Card2.setIcon(imageIcons[player1.get(1)]);
-                p1Card3.setIcon(imageIcons[player1.get(2)]);
-                p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-            } else if (a == 3) {
-                p1Card1.setIcon(imageIcons[player1.get(0)]);
-                p1Card2.setIcon(imageIcons[player1.get(1)]);
-                p1Card3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-            } else if (a == 2) {
-                p1Card1.setIcon(imageIcons[player1.get(0)]);
-                p1Card2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-            } else if (a == 1) {
-                p1Card1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-                p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
-            }
+
+            p1Card1.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+            p1Card2.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+            p1Card3.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+            p1Card4.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+            p1Card5.setIcon(new ImageIcon(getClass().getResource("/elementalists/img/cards/cardback.png")));
+
+            if (a > 1) p1Card1.setIcon(imageIcons[player1.get(0)]);
+            if (a > 2) p1Card2.setIcon(imageIcons[player1.get(1)]);
+            if (a > 3) p1Card3.setIcon(imageIcons[player1.get(2)]);
+            if (a > 4) p1Card4.setIcon(imageIcons[player1.get(3)]);
+            if (a > 5) p1Card5.setIcon(imageIcons[player1.get(4)]);
+
             p1Card1.setEnabled(true);
             p1Card2.setEnabled(true);
             p1Card3.setEnabled(true);
             p1Card4.setEnabled(true);
             p1Card5.setEnabled(true);
-            timer2.stop();
+            addCards.stop();
+        }
+    });
+    Timer toWinnerScreen = new Timer(2000, new ActionListener() {
+        /**
+         * After 2 seconds, this method opens the winner screen.
+         *
+         * @param e Looks for the start of the timer.
+         */
+        public void actionPerformed(ActionEvent e) {
+            StartMenu.frame.setContentPane(new WinnerScreen().getJPanel());
+            StartMenu.frame.pack();
+            StartMenu.frame.setLocationRelativeTo(null);
+            toWinnerScreen.stop();
+        }
+    });
+    Timer toLoserScreen = new Timer(2000, new ActionListener() {
+        /**
+         * After 2 seconds, this method opens the loser screen.
+         *
+         * @param e Looks for the start of the timer.
+         */
+        public void actionPerformed(ActionEvent e) {
+            StartMenu.frame.setContentPane(new LoserScreen().getJPanel());
+            StartMenu.frame.pack();
+            StartMenu.frame.setLocationRelativeTo(null);
+            toLoserScreen.stop();
         }
     });
 
+    /**
+     * Constructor method for Elementalists class. Within this method, the array of image icons is defined and
+     * constructed, the cards are randomized, the hand is displayed, and the methods on button click are called.
+     */
     public Elementalists() {
         for (int i = 0; i < imageIcons.length; i++) {
             if (i < 10) {
@@ -144,107 +171,93 @@ public class Elementalists {
         p1Card4.setIcon(imageIcons[player1.get(3)]);
         p1Card5.setIcon(imageIcons[player1.get(4)]);
 
-
+        /**
+         * Method for when a card within the player's hand is selected. Nothing will run if canClick = false.
+         * When run, the other card options will be greyed out to show off what card was selected, as well as
+         * not allowing the player to click again. Then it will compare the cards and shuffle them. All card
+         * buttons do the same thing, but for different cards.
+         *
+         * @param e Looks for button click.
+         * @return Nothing.
+         */
         p1Card1.addActionListener(new ActionListener() {
             @Override
+
             public void actionPerformed(ActionEvent e) {
-                try {
-                    if (canClick) {
-                        canClick = false;
-                        p1Card2.setEnabled(false);
-                        p1Card3.setEnabled(false);
-                        p1Card4.setEnabled(false);
-                        p1Card5.setEnabled(false);
-                        compareCards(player1.get(0));
-                        shuffleCards(0);
-                    }
-                } catch (IndexOutOfBoundsException ex) {
-                    JOptionPane.showMessageDialog(null, "game over");
+                if (canClick) {
+                    canClick = false;
+                    p1Card2.setEnabled(false);
+                    p1Card3.setEnabled(false);
+                    p1Card4.setEnabled(false);
+                    p1Card5.setEnabled(false);
+                    compareCards(player1.get(0), getPlayer2int());
+                    shuffleCards(0);
                 }
             }
         });
         p1Card2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    if (canClick) {
-                        canClick = false;
-                        p1Card1.setEnabled(false);
-                        p1Card3.setEnabled(false);
-                        p1Card4.setEnabled(false);
-                        p1Card5.setEnabled(false);
-                        compareCards(player1.get(1));
-                        shuffleCards(1);
-                    }
-                } catch (IndexOutOfBoundsException ex) {
-                    JOptionPane.showMessageDialog(null, "game over");
+                if (canClick) {
+                    canClick = false;
+                    p1Card1.setEnabled(false);
+                    p1Card3.setEnabled(false);
+                    p1Card4.setEnabled(false);
+                    p1Card5.setEnabled(false);
+                    compareCards(player1.get(1), getPlayer2int());
+                    shuffleCards(1);
                 }
             }
         });
         p1Card3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    if (canClick) {
-                        canClick = false;
-                        p1Card1.setEnabled(false);
-                        p1Card2.setEnabled(false);
-                        p1Card4.setEnabled(false);
-                        p1Card5.setEnabled(false);
-                        compareCards(player1.get(2));
-                        shuffleCards(2);
-                    }
-                } catch (IndexOutOfBoundsException ex) {
-                    JOptionPane.showMessageDialog(null, "game over");
+                if (canClick) {
+                    canClick = false;
+                    p1Card1.setEnabled(false);
+                    p1Card2.setEnabled(false);
+                    p1Card4.setEnabled(false);
+                    p1Card5.setEnabled(false);
+                    compareCards(player1.get(2), getPlayer2int());
+                    shuffleCards(2);
                 }
             }
         });
         p1Card4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    if (canClick) {
-                        canClick = false;
-                        p1Card1.setEnabled(false);
-                        p1Card2.setEnabled(false);
-                        p1Card3.setEnabled(false);
-                        p1Card5.setEnabled(false);
-                        compareCards(player1.get(3));
-                        shuffleCards(3);
-                    }
-                } catch (IndexOutOfBoundsException ex) {
-                    JOptionPane.showMessageDialog(null, "game over");
+                if (canClick) {
+                    canClick = false;
+                    p1Card1.setEnabled(false);
+                    p1Card2.setEnabled(false);
+                    p1Card3.setEnabled(false);
+                    p1Card5.setEnabled(false);
+                    compareCards(player1.get(3), getPlayer2int());
+                    shuffleCards(3);
                 }
             }
         });
         p1Card5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    if (canClick) {
-                        canClick = false;
-                        p1Card1.setEnabled(false);
-                        p1Card2.setEnabled(false);
-                        p1Card3.setEnabled(false);
-                        p1Card4.setEnabled(false);
-                        compareCards(player1.get(4));
-                        shuffleCards(4);
-                    }
-                } catch (IndexOutOfBoundsException ex) {
-                    JOptionPane.showMessageDialog(null, "game over");
+                if (canClick) {
+                    canClick = false;
+                    p1Card1.setEnabled(false);
+                    p1Card2.setEnabled(false);
+                    p1Card3.setEnabled(false);
+                    p1Card4.setEnabled(false);
+                    compareCards(player1.get(4), getPlayer2int());
+                    shuffleCards(4);
                 }
             }
         });
     }
 
-    public void compareCards(int player1int) {
-
-        ImageIcon blueAttack = new ImageIcon(attack1 + "blueAttack.gif");
-        ImageIcon redDamage = new ImageIcon(attack2 + "redDamage.gif");
-        ImageIcon blueDamage = new ImageIcon(attack1 + "blueDamage.gif");
-        ImageIcon redAttack = new ImageIcon(attack2 + "redAttack.gif");
-        ImageIcon cardBack = new ImageIcon("./src/elementalists.img/cards/cardback.png");
-
+    /**
+     * Gets a random card for player 2. Also reveals player 2's card at a random card position.
+     * @return Player 2's card ID.
+     */
+    private int getPlayer2int() {
         int player2int = player2.get(0);
         int randomCard = ThreadLocalRandom.current().nextInt(1, 5 + 1);
         if (randomCard == 1) p2Card1.setIcon(imageIcons[player2.get(0)]);
@@ -252,6 +265,22 @@ public class Elementalists {
         else if (randomCard == 3) p2Card3.setIcon(imageIcons[player2.get(0)]);
         else if (randomCard == 4) p2Card4.setIcon(imageIcons[player2.get(0)]);
         else if (randomCard == 5) p2Card5.setIcon(imageIcons[player2.get(0)]);
+        return player2int;
+    }
+
+    /**
+     * First, this method will select a card for player 2 to play. Then it will determine the winner, and do actions
+     * based on the winner. Then the round will reset and player 2's card will be discarded.
+     *
+     * @param player1int Player 1's card ID (0>x>10 -> fire, 10>x>20 -> water, 20>x>30 -> ice, x%10 -> value).
+     * @param player2int Player 2's card ID.
+     */
+    public void compareCards(int player1int, int player2int) {
+
+        ImageIcon blueAttack = new ImageIcon(attack1 + "blueAttack.gif");
+        ImageIcon redDamage = new ImageIcon(attack2 + "redDamage.gif");
+        ImageIcon blueDamage = new ImageIcon(attack1 + "blueDamage.gif");
+        ImageIcon redAttack = new ImageIcon(attack2 + "redAttack.gif");
 
         if (player1int >= 0 && player1int <= 9) {
             if (player2int >= 10 && player2int <= 19) {
@@ -283,50 +312,58 @@ public class Elementalists {
                     action.setText("Both you and the enemy fizzled!");
                 }
             }
-        } else if (player1int >= 10 && player1int <= 19) {
+        }
+        else if (player1int >= 10 && player1int <= 19) {
             if (player2int >= 0 && player2int <= 9) {
                 action.setText("You attacked with a water attack!");
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
                 p1WaterWins++;
                 checkWinner();
-            } else if (player2int >= 20 && player2int <= 29) {
+            }
+            else if (player2int >= 20 && player2int <= 29) {
                 action.setText("Enemy attacked with a ice attack!");
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
                 p2IceWins++;
                 checkWinner();
-            } else if (player2int >= 10 && player2int <= 19) {
+            }
+            else if (player2int >= 10 && player2int <= 19) {
                 if (player1int > player2int) {
                     action.setText("You attacked with a stronger attack!");
                     player1Icon.setIcon(blueAttack);
                     player2Icon.setIcon(redDamage);
                     p1WaterWins++;
                     checkWinner();
-                } else if (player1int < player2int) {
+                }
+                else if (player1int < player2int) {
                     action.setText("Enemy attacked with a stronger attack!");
                     player1Icon.setIcon(blueDamage);
                     player2Icon.setIcon(redAttack);
                     p2WaterWins++;
                     checkWinner();
-                } else {
+                }
+                else {
                     action.setText("Both you and the enemy fizzled!");
                 }
             }
-        } else if (player1int >= 20 && player1int <= 29) {
+        }
+        else if (player1int >= 20 && player1int <= 29) {
             if (player2int >= 0 && player2int <= 9) {
                 action.setText("Enemy attacked with a fire attack!");
                 player1Icon.setIcon(blueDamage);
                 player2Icon.setIcon(redAttack);
                 p2FireWins++;
                 checkWinner();
-            } else if (player2int >= 10 && player2int <= 19) {
+            }
+            else if (player2int >= 10 && player2int <= 19) {
                 action.setText("You attacked with an ice attack!");
                 player1Icon.setIcon(blueAttack);
                 player2Icon.setIcon(redDamage);
                 p1IceWins++;
                 checkWinner();
-            } else if (player2int >= 20 && player2int <= 29) {
+            }
+            else if (player2int >= 20 && player2int <= 29) {
                 if (player1int > player2int) {
                     action.setText("You attacked with a stronger attack!");
                     player1Icon.setIcon(blueAttack);
@@ -344,89 +381,86 @@ public class Elementalists {
                 }
             }
         }
-        timer.start();
+
+        resetRoundTimer.start();
         player2.remove(0);
     }
 
-    Timer toWinnerScreen = new Timer(2000, new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            System.out.println("TIMER IS RUNNING");
-            StartMenu.frame.setContentPane(new WinnerScreen().getJPanel());
-            StartMenu.frame.pack();
-            StartMenu.frame.setLocationRelativeTo(null);
-            toWinnerScreen.stop();
-        }
-    });
-
-    Timer toLoserScreen = new Timer(2000, new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            System.out.println("TIMER IS RUNNING");
-            StartMenu.frame.setContentPane(new LoserScreen().getJPanel());
-            StartMenu.frame.pack();
-            StartMenu.frame.setLocationRelativeTo(null);
-            toLoserScreen.stop();
-        }
-    });
-
+    /**
+     * Determines if someone withs the game. If someone wins, the user will be informed, and the winner/loser
+     * screen will be launched.
+     */
     public void checkWinner() {
         if (p1FireWins == 3) {
             p1Fire1.setEnabled(true);
             p1Fire2.setEnabled(true);
             p1Fire3.setEnabled(true);
-        } else if (p1FireWins == 2) {
+        }
+        else if (p1FireWins == 2) {
             p1Fire1.setEnabled(true);
             p1Fire2.setEnabled(true);
-        } else if (p1FireWins == 1) {
+        }
+        else if (p1FireWins == 1) {
             p1Fire1.setEnabled(true);
         }
         if (p1WaterWins == 3) {
             p1Water1.setEnabled(true);
             p1Water2.setEnabled(true);
             p1Water3.setEnabled(true);
-        } else if (p1WaterWins == 2) {
+        }
+        else if (p1WaterWins == 2) {
             p1Water1.setEnabled(true);
             p1Water2.setEnabled(true);
-        } else if (p1WaterWins == 1) {
+        }
+        else if (p1WaterWins == 1) {
             p1Water1.setEnabled(true);
         }
         if (p1IceWins == 3) {
             p1Ice1.setEnabled(true);
             p1Ice2.setEnabled(true);
             p1Ice3.setEnabled(true);
-        } else if (p1IceWins == 2) {
+        }
+        else if (p1IceWins == 2) {
             p1Ice1.setEnabled(true);
             p1Ice2.setEnabled(true);
-        } else if (p1IceWins == 1) {
+        }
+        else if (p1IceWins == 1) {
             p1Ice1.setEnabled(true);
         }
         if (p2FireWins == 3) {
             p2Fire1.setEnabled(true);
             p2Fire2.setEnabled(true);
             p2Fire3.setEnabled(true);
-        } else if (p2FireWins == 2) {
+        }
+        else if (p2FireWins == 2) {
             p2Fire1.setEnabled(true);
             p2Fire2.setEnabled(true);
-        } else if (p2FireWins == 1) {
+        }
+        else if (p2FireWins == 1) {
             p2Fire1.setEnabled(true);
         }
         if (p2WaterWins == 3) {
             p2Water1.setEnabled(true);
             p2Water2.setEnabled(true);
             p2Water3.setEnabled(true);
-        } else if (p2WaterWins == 2) {
+        }
+        else if (p2WaterWins == 2) {
             p2Water1.setEnabled(true);
             p2Water2.setEnabled(true);
-        } else if (p2WaterWins == 1) {
+        }
+        else if (p2WaterWins == 1) {
             p2Water1.setEnabled(true);
         }
         if (p2IceWins == 3) {
             p2Ice1.setEnabled(true);
             p2Ice2.setEnabled(true);
             p2Ice3.setEnabled(true);
-        } else if (p2IceWins == 2) {
+        }
+        else if (p2IceWins == 2) {
             p2Ice1.setEnabled(true);
             p2Ice2.setEnabled(true);
-        } else if (p2IceWins == 1) {
+        }
+        else if (p2IceWins == 1) {
             p2Ice1.setEnabled(true);
         }
 
@@ -440,11 +474,21 @@ public class Elementalists {
         }
     }
 
+    /**
+     * Removes a card from player 1's deck and starts the addCards timer.
+     *
+     * @param remove determines the card to remove from player 1's deck.
+     */
     public void shuffleCards(int remove) {
         player1.remove(remove);
-        timer2.start();
+        addCards.start();
     }
 
+    /**
+     * Randomizes player 1's deck from an array from 0-29.
+     *
+     * @return Randomized player 1 deck.
+     */
     public static ArrayList<Integer> randomizeCards() {
         ArrayList<Integer> cardPool = new ArrayList<Integer>();
         for (int i = 0; i < 30; i++) {
@@ -454,21 +498,37 @@ public class Elementalists {
         return cardPool;
     }
 
+    /**
+     * Returns current jPanel. Is used for switching between different screens.
+     *
+     * @return the current jPanel.
+     */
     public JPanel getJPanel() {
         return jPanel;
     }
 
-    private static void fullScreen(JFrame aFrame) { // src = https://alvinalexander.com/blog/post/jfc-swing/how-set-jframe-size-fill-entire-screen-maximize/
+    /**
+     * Full-screens the current window.
+     * src: https://alvinalexander.com/blog/post/jfc-swing/how-set-jframe-size-fill-entire-screen-maximize/
+     *
+     * @param aFrame The frame that should be full-screened.
+     */
+    private static void fullScreen(JFrame aFrame) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         aFrame.setSize(screenSize.width, screenSize.height);
     }
 
+    /**
+     * Main method. Opens the Elementalists frame to play the game.
+     *
+     * @param args Needed for main methods.
+     * @deprecated
+     */
     public static void main(String[] args) {
         JFrame frame = new JFrame("MyGameForm");
         frame.setContentPane(new Elementalists().jPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fullScreen(frame);
-        //frame.pack();
         frame.setLocationRelativeTo(null);
 
         frame.setVisible(true);

@@ -1,3 +1,17 @@
+/**
+ * The winner screen class. This is the class that users will run when the user wins.
+ *
+ * https://github.com/vrajpatel2003/Elementalists
+ *
+ * Created by Ayush Vora, Neil Patel, Vicky Patel, and Vraj Patel
+ * For Mr. Keway So (vmso) for the final project (4.3) of ICS4U (Computer Science)
+ *
+ * @author  Ayush Vora, Neil Patel, Vicky Patel, Vraj Patel
+ * @version 1.0
+ * @since   2020-11-12
+ * @filename WinerScreen.java
+ */
+
 package elementalists;
 
 import javax.swing.*;
@@ -10,7 +24,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.io.FileWriter;
 
-
 public class WinnerScreen {
     private JButton playAgainButton;
     private JButton quitGameButton;
@@ -19,6 +32,10 @@ public class WinnerScreen {
     private JLabel rankUpMessage;
     static JFrame frame = new JFrame("You Won :)");
 
+    /**
+     * Constructor class for the WinnerScreen class. Checks the rank of the player and creates a listener for the
+     * play again and quit button.
+     */
     public WinnerScreen() {
         rankCheck();
         playAgainButton.addActionListener(new ActionListener() {
@@ -37,23 +54,9 @@ public class WinnerScreen {
         });
     }
 
-    public JPanel getJPanel() {
-        return victoryPanel;
-    }
-
-    private static void fullScreen(JFrame aFrame) { // src = https://alvinalexander.com/blog/post/jfc-swing/how-set-jframe-size-fill-entire-screen-maximize/
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        aFrame.setSize(screenSize.width, screenSize.height);
-    }
-
-    public static void main(String[] args) {
-        frame.setContentPane(new WinnerScreen().victoryPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
-
+    /**
+     * Checks the rank of the user, and displays it on the GUI.
+     */
     public void rankCheck() {
         BufferedReader br = null;
         ArrayList<String> fileLines = new ArrayList<>();
@@ -94,6 +97,39 @@ public class WinnerScreen {
                 ex.printStackTrace();
             }
         }
+    }
+
+    /**
+     * Gets the JPanel of the WinnerScreen class. Used for switching between windows.
+     * @return winner screen JPanel.
+     */
+    public JPanel getJPanel() {
+        return victoryPanel;
+    }
+
+    /**
+     * Full-screens the current window.
+     * src: https://alvinalexander.com/blog/post/jfc-swing/how-set-jframe-size-fill-entire-screen-maximize/
+     *
+     * @param aFrame The frame that should be full-screened.
+     */
+    private static void fullScreen(JFrame aFrame) {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        aFrame.setSize(screenSize.width, screenSize.height);
+    }
+
+    /**
+     * Main method for the WinnerScreen class. Used to create the GUI with the JPanel of the winner screen.
+     *
+     * @param args Required parameter for main classes.
+     * @deprecated
+     */
+    public static void main(String[] args) {
+        frame.setContentPane(new WinnerScreen().victoryPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     {

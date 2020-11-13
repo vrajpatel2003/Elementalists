@@ -1,3 +1,17 @@
+/**
+ * The start menu class. This is the class that users will run to play the game. Running any other class may lead
+ * to issues. When one runs this class, the start menu will open.
+ *
+ * https://github.com/vrajpatel2003/Elementalists
+ *
+ * Created by Ayush Vora, Neil Patel, Vicky Patel, and Vraj Patel
+ * For Mr. Keway So (vmso) for the final project (4.3) of ICS4U (Computer Science)
+ *
+ * @author  Ayush Vora, Neil Patel, Vicky Patel, Vraj Patel
+ * @version 1.0
+ * @since   2020-11-12
+ * @filename StartMenu.java
+ */
 package elementalists;
 
 import javax.swing.*;
@@ -14,6 +28,10 @@ public class StartMenu {
     public static JFrame frame = new JFrame("Elementalists");
 
 
+    /**
+     * Constructor Class for the Start menu. When ran, the rainCheck method will run, and a listener will be created
+     * for the "Start Game" button.
+     */
     public StartMenu() {
         rankCheck();
         startGameButton.addActionListener(new ActionListener() {
@@ -26,19 +44,9 @@ public class StartMenu {
         });
     }
 
-    private static void fullScreen(JFrame aFrame) { // src = https://alvinalexander.com/blog/post/jfc-swing/how-set-jframe-size-fill-entire-screen-maximize/
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        aFrame.setSize(screenSize.width, screenSize.height);
-    }
-
-    public static void main(String[] args) {
-        frame.setContentPane(new StartMenu().startMenu);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
-
+    /**
+     * Checks the rank of the current user, and outputs it into the text label in the GUI.
+     */
     public void rankCheck() {
         BufferedReader br = null;
         ArrayList<String> fileLines = new ArrayList<>();
@@ -63,6 +71,30 @@ public class StartMenu {
                 ex.printStackTrace();
             }
         }
+    }
+
+    /**
+     * Full-screens the current window.
+     * src: https://alvinalexander.com/blog/post/jfc-swing/how-set-jframe-size-fill-entire-screen-maximize/
+     *
+     * @param aFrame The frame that should be full-screened.
+     */
+    private static void fullScreen(JFrame aFrame) {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        aFrame.setSize(screenSize.width, screenSize.height);
+    }
+
+    /**
+     * Main class. Running the main class will create and open the GUI.
+     *
+     * @param args Required for Main methods.
+     */
+    public static void main(String[] args) {
+        frame.setContentPane(new StartMenu().startMenu);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     {
