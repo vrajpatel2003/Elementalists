@@ -31,7 +31,7 @@ The purpose of this program is simple. With Google Chrome ending support for Ado
 - The objective in Elementalists is to beat the opponent using your given cards, and eventually earn the rank of Grandmaster.
 - After installing and running the program, click “Start Game!” Your current rank is also displayed here.
 - After starting the game, you should see your current cards. You are dealt a total of thirty cards, ten of each element. Only five are accessible at a given time.
-- Similar to Rock, Paper Scissors, each element beats another element. Choose a card from the five you have been given. Upon using one, you will lose it and gain a new card.
+- Similar to Rock Paper Scissors, each element beats another element. Choose a card from the five you have been given. Upon using one, you will lose it and gain a new card.
   - Fire beats Ice
   - Ice beats Water
   - Water beats Fire
